@@ -1,0 +1,89 @@
+
+.navbar-brand img {
+    height: 30px; 
+  }
+
+.card {
+    color: #031620;;
+    box-shadow: #031620;;
+    margin: 8px 4px; 
+    border-radius: 10px; 
+    background: #ffa500;
+    padding: 15px; 
+    width: 100%;
+    font-size: 25px;
+}
+
+.btnPrimaryA {
+    background-color: #031620;;
+    border: 2px solid #ffa500;
+    border-radius: 20px;
+    padding-left: 45%;
+    padding-right: 44%;
+    color: #ffa500;
+}
+
+.inputErr {
+    color: #BA423C; 
+    background-color: #ffa500; 
+    padding: 10px;
+}
+
+.form-control {
+    width: 100%;
+    appearance: none;
+    border-width: 0px;
+    box-shadow: currentcolor 0px 0px 0px 1px;
+    border-style: solid;
+    border-radius: 6px;
+    background: transparent;
+    color: inherit;
+    padding: 8px;
+    font-weight: 700;
+    font-size: 16px;
+    margin-top: 8px;
+    transition: all 0.2s ease 0s;
+}
+
+a {
+    color: #031620;;
+}
+
+a:hover {
+    font-weight: 1000;
+    color: #031620;;
+}
+
+body {
+    font-family: 'Montserrat';
+    margin: 0;
+    padding: 0;
+    background-color: #031620;
+    color: #ffa500;
+}
+
+.nav-link {
+    color: white;
+}
+
+header {
+    background-color: #ffa500; 
+    color: #031620;;
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+footer {
+    background-color: #ffa500; 
+    color: #031620;;
+    padding: 20px;
+    text-align: center;
+    font-size: 16px;
+}
+
+footer p {
+    margin: 5px 0;
+}

@@ -1,0 +1,97 @@
+.card {
+    color: #031629;
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+    margin: 8px 4px; 
+    /* border: 2px solid #031629;  */
+    border-radius: 10px; 
+    background: #ffa500;
+    padding: 15px; 
+    width: 100%;
+}
+
+.navbar-brand img {
+    height: 30px; 
+}
+
+a:hover {
+    font-weight: 1000;
+    color: #031629;
+}
+
+.form-control {
+    width: 100%;
+    appearance: none;
+    border-width: 0px;
+    box-shadow: currentcolor 0px 0px 0px 1px;
+    border-style: solid;
+    border-radius: 6px;
+    background: transparent;
+    color: inherit;
+    padding: 8px;
+    font-weight: 700;
+    font-size: 16px;
+    margin-top: 8px;
+    transition: all 0.2s ease 0s;
+}
+
+::placeholder {
+    color: #031629;
+}
+
+.btnPrimaryA {
+    background-color: #031629;
+    border: 2px solid #ffa500;
+    border-radius: 20px;
+    padding-left: 45%;
+    padding-right: 44%;
+    font-size: 30px;
+    color: #ffa500;
+}
+
+body {
+    font-family: 'Montserrat';
+    margin: 0;
+    padding: 0;
+    background-color: #031629;
+    color: #ffa500;
+}
+
+a {
+    color: #031629;
+}
+
+a:hover {
+    font-weight: 1000;
+    color: #031629;
+}
+
+header {
+    background-color: #ffa500; 
+    color: #031629;
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+footer {
+    background-color: #ffa500; 
+    color: #031629;
+    padding: 20px;
+    text-align: center;
+    font-size: 16px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+.inputErr {
+    color: #BA423C; 
+    background-color: #ffa500; 
+    padding-left: 35%; 
+    padding-right: 35%; 
+    padding-top: 10px; 
+    padding-bottom: 10px;
+}
