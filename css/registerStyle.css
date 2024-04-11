@@ -1,8 +1,8 @@
 .card {
-    color: #031629;
+    color: #031620;
     /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
     margin: 8px 4px; 
-    /* border: 2px solid #031629;  */
+    /* border: 2px solid #031620;  */
     border-radius: 10px; 
     background: #ffa500;
     padding: 15px; 
@@ -15,7 +15,7 @@
 
 a:hover {
     font-weight: 1000;
-    color: #031629;
+    color: #031620;
 }
 
 .form-control {
@@ -35,11 +35,11 @@ a:hover {
 }
 
 ::placeholder {
-    color: #031629;
+    color: #031620;
 }
 
 .btnPrimaryA {
-    background-color: #031629;
+    background-color: #031620;
     border: 2px solid #ffa500;
     border-radius: 20px;
     padding-left: 45%;
@@ -52,22 +52,22 @@ body {
     font-family: 'Montserrat';
     margin: 0;
     padding: 0;
-    background-color: #031629;
+    background-color: #031620;
     color: #ffa500;
 }
 
 a {
-    color: #031629;
+    color: #031620;
 }
 
 a:hover {
     font-weight: 1000;
-    color: #031629;
+    color: #031620;
 }
 
 header {
     background-color: #ffa500; 
-    color: #031629;
+    color: #031620;
     padding: 20px;
     text-align: center;
     font-size: 30px;
@@ -77,7 +77,7 @@ header {
 
 footer {
     background-color: #ffa500; 
-    color: #031629;
+    color: #031620;
     padding: 20px;
     text-align: center;
     font-size: 16px;
