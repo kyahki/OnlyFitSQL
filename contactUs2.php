@@ -1,41 +1,43 @@
 <!DOCTYPE html>
- 
+<html>
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE-edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="css/contactUsStyle.css" rel="stylesheet">
-<link href='https://unpkg.com/css.gg@2.0.0/icons/css/mail.css' rel='stylesheet'>
-<link href='https://unpkg.com/css.gg@2.0.0/icons/css/phone.css' rel='stylesheet'>
-<link href='https://unpkg.com/css.gg@2.0.0/icons/css/facebook.css' rel='stylesheet'>
-<title>OnlyFit</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/contactUs3.css" rel="stylesheet">
+  <link href='https://unpkg.com/css.gg@2.0.0/icons/css/mail.css' rel='stylesheet'>
+  <link href='https://unpkg.com/css.gg@2.0.0/icons/css/phone.css' rel='stylesheet'>
+  <link href='https://unpkg.com/css.gg@2.0.0/icons/css/facebook.css' rel='stylesheet'>
+  <title>OnlyFit</title>
 </head>
 <body>
 <header>ONLYFIT</header>
-<h3>Contact Us</h3>
-<nav class="navbar navbar-expand-lg navbar-light bg-white">
-  <div class="container">
-    <a class="navbar-brand" href="#">
+
+<nav class="navbar">
+  <ul class="navbar-nav">
+    <li class = "logoleft">
       <img src="path_to_your_logo.png" alt="Logo">
-    </a>
-   
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="index.php">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="register.php">Register</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="aboutUs.php">About Us</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="contactUs.php">Contact Us</a>
-      </li>
-    </ul>
-  </div>
+    </li>
+    <li class = "navright">
+      <a href="register.php#registrationForm">Register</a>
+    </li>
+    <li class = "navright">
+      <a href="login.php#LogCard">Login</a>
+    </li>
+    <li class = "navright">
+      <a href="aboutUs.php">About Us</a>
+    </li>
+    <li class = "navright">
+      <a href="contactUs.php">Contact Us</a>
+    </li>
+  </ul>
 </nav>
+
+<div class="content">
+  <!-- Your content here -->
+</div>
+<!-- <h3>Contact Us</h3> 
 <div class="otherbody">
-<div class = "container2">
+<div class = "contbody">
   <form action="#" class="form">
     <h2>CONTACT US</h2>
     <div class="input">
@@ -63,7 +65,7 @@
     </ul>
   </div>
 </div>
-</div>
+</div> -->
 <footer><p>Kyle Vasquez,
     Bachelor of Computer Science | Year 2</p></footer>
 </body>

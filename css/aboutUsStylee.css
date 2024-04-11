@@ -1,0 +1,118 @@
+body {
+    font-family: 'Montserrat';
+    margin: 0;
+    padding: 0;
+    /* background: linear-gradient(135deg, #667eea 0%, #5b4670 100%); */
+    background-color: #031620;
+    color: #ffa500;
+}
+.navbar-brand img {
+    height: 30px; 
+  }
+
+.image-container {
+    width: 500px;
+    height: 200px;
+}
+
+.image-container img {
+    width: 500px;
+    height: auto;
+    display: block;
+}
+
+
+a:hover {
+    font-weight: 1000;
+    color: #031620;
+}
+
+
+header {
+    background-color: #ffa500;
+    color: #031620;
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+footer {
+    background-color: #ffa500;
+    color: #031620;
+    padding: 20px;
+    text-align: center;
+    font-size: 16px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+a {
+    color: #031620;;
+}
+
+.about-section {
+    background-color: #ffa500;
+    color: #031620;
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 100;
+    
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+.row{
+    background-color: #031620;;
+}
+.column {
+    float: left;
+    width: 47%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+}
+
+a:hover {
+    font-weight: 1000;
+    color: #031620;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px 4px; 
+    border: 2px solid black; 
+    border-radius: 10px; 
+    color: #ffa500;
+    background-color: #031620;
+    padding: 2%;
+}
+
+
+.title {
+    color: #ffa500;
+}
+
+.button {
+    border: none;
+    outline: 0;
+   display:block;
+    padding: .8%;
+    color:  #031620;
+    background-color:#ffa500;
+    text-align: center;
+    cursor: pointer;
+    width: 90%;
+}
+.button:hover {
+    background-color: rgb(200, 133, 8);
+}
+
+@media screen and (max-width: 650px) {
+    .column {
+        width: 100%;
+        display: block;
+    }
+}
