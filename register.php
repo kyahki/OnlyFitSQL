@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no,viewport-fit=cover">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/registerStyle.css" rel="stylesheet">
+    <link href="css/registerStylee.css" rel="stylesheet">
     <script src="js/script.js"></script>
     <title>OnlyFit</title>
 </head>
@@ -20,16 +20,16 @@
 
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" style="color:white" href="index.php">Home</a>
+                    <a class="nav-link" href="index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" style="color:white" href="login.php#LogCard">Login</a>
+                    <a class="nav-link" href="login.php#LogCard">Login</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" style="color:white" href="aboutUss.php">About Us</a>
+                    <a class="nav-link" href="aboutUs.php">About Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" style="color:white" href="contactUss.php">Contact Us</a>
+                    <a class="nav-link" href="contactUs.php">Contact Us</a>
                 </li>
             </ul>
         </div>

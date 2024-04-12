@@ -4,12 +4,12 @@
   }
 
 a {
-    color: #031620;;
+    color: #031620;
 }
 
 a:hover {
     font-weight: 1000;
-    color: #031620;;
+    color: #031620;
 }
 
 body {
@@ -21,7 +21,7 @@ body {
 }
 
 .nav-link {
-    color: white;
+    color: #ffa500;
 }
 
 header {
@@ -75,14 +75,14 @@ footer p {
     margin: 8px 4px; 
     border: 2px solid black; 
     border-radius: 10px; 
-    color: #ffa500;
-    background-color: #031620;
+    color: #031620;
+    background-color: #ffa500;
     padding: 2%;
 }
 
 
 .title {
-    color: #ffa500;
+    color: #031620;
 }
 
 .button {
@@ -90,8 +90,8 @@ footer p {
     outline: 0;
    display:block;
     padding: .8%;
-    color:  #031620;
-    background-color:#ffa500;
+    color:  #ffa500;
+    background-color:#031620;
     text-align: center;
     cursor: pointer;
     width: 90%;
@@ -105,5 +105,9 @@ footer p {
         width: 100%;
         display: block;
     }
+}
+
+h2, p {
+    color: #031620;
 }
 

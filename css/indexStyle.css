@@ -21,10 +21,8 @@ body {
     display: block;
 }
 
-
-a:hover {
-    font-weight: 1000;
-    color: #031620;
+.nav-link {
+    color:#ffa500;
 }
 
 

@@ -45,13 +45,9 @@
     transition: all 0.2s ease 0s;
 }
 
-a {
-    color: #031620;;
-}
-
 a:hover {
     font-weight: 1000;
-    color: #031620;;
+    color: #031620;
 }
 
 body {
@@ -62,8 +58,8 @@ body {
     color: #ffa500;
 }
 
-.nav-link {
-    color: white;
+a.nav-link {
+    color: #ffa500;
 }
 
 header {

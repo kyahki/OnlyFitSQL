@@ -28,10 +28,10 @@
               <a class="nav-link" style="color:white" href="login.php#LogCard">Login</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" style="color:white" href="aboutUss.php">About Us</a>
+              <a class="nav-link" style="color:white" href="aboutUs.php">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" style="color:white" href="contactUss.php">Contact Us</a>
+              <a class="nav-link" style="color:white" href="contactUs.php">Contact Us</a>
             </li>
           </ul>
         </div>

@@ -9,6 +9,10 @@
     width: 100%;
 }
 
+.navbar-light .navbar-nav .nav-link {
+    color: #ffa500;
+}
+
 .navbar-brand img {
     height: 30px; 
 }
@@ -57,12 +61,12 @@ body {
 }
 
 a {
-    color: #031620;
+    color: #031620;;
 }
 
 a:hover {
     font-weight: 1000;
-    color: #031620;
+    color: #031620;;
 }
 
 header {

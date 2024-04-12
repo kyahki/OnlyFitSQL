@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no,viewport-fit=cover">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/loginStyle1.css" rel="stylesheet">
+    <link href="css/loginStyle.css" rel="stylesheet">
     <link href="css/loginMessage.css" rel="stylesheet">
     <script src="js/script.js"></script>
     <title>OnlyFit</title>
@@ -27,10 +27,10 @@
               <a class="nav-link" href="register.php#registrationForm">Register</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="aboutUss.php">About Us</a>
+              <a class="nav-link" href="aboutUs.php">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contactUss.php">Contact Us</a>
+              <a class="nav-link" href="contactUs.php">Contact Us</a>
             </li>
           </ul>
         </div>
@@ -52,14 +52,14 @@
                           <input type="password" class="form-control" id="password" name="txtpassword" required>
                       </div>
                       <div class="mb-3">
-                          <a href="forgot_password.php" class="forgot-password-link">Forgot Password?</a>
+                          <a href="forgot_password.php" class="forgot-password-link" style="color:#031620;">Forgot Password?</a>
                       </div>
                       <div class="text-center">
                           <button type="submit" class="btnPrimaryA" name="btnLogin">Login</button>
                       </div>
                   </form>
                   <div class="mt-3 text-center">
-                      <p>Don't have an account yet? <a href="register.php#registrationForm">Register here</a></p>
+                      <p>Don't have an account yet? <a style="color:#031620;" href="register.php#registrationForm">Register here</a></p>
                   </div>
               </div>
           </div>
