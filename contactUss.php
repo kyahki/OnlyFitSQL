@@ -1,18 +1,19 @@
-<!DOCTYPE html>
- 
+<?php
+    include 'connect.php'
+?>
+
 <head>
-  <meta http-equiv="X-UA-Compatible" content="IE-edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="css/contactUsStyle.css" rel="stylesheet">
-<link href='https://unpkg.com/css.gg@2.0.0/icons/css/mail.css' rel='stylesheet'>
-<link href='https://unpkg.com/css.gg@2.0.0/icons/css/phone.css' rel='stylesheet'>
-<link href='https://unpkg.com/css.gg@2.0.0/icons/css/facebook.css' rel='stylesheet'>
-<title>OnlyFit</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no,viewport-fit=cover">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+   
+    <link href="css/contactUss.css" rel="stylesheet">
+    <script src="js/script.js"></script>
+    <title>OnlyFit</title>
 </head>
 <body>
-<header>ONLYFIT</header>
-
-<nav class="navbar navbar-expand-lg navbar-light">
+    <header>ONLYFIT</header>
+    <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container" style="font-size: 22px; font-weight: bold">
           <a class="navbar-brand" href="#">
             <img src="path_to_your_logo.png" alt="Logo">
@@ -20,22 +21,22 @@
           
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" style="color:white" href="register.php#registrationForm">Register</a>
+              <a class="nav-link" href="index.php">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" style="color:white" href="login.php#LogCard">Login</a>
+              <a class="nav-link" href="register.php#registrationForm">Register</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" style="color:white" href="aboutUs.php">About Us</a>
+              <a class="nav-link" href="aboutUss.php">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" style="color:white" href="contactUs.php">Contact Us</a>
+              <a class="nav-link" href="contactUs.php">Contact Us</a>
             </li>
           </ul>
         </div>
-      </nav>
-<h3>Contact Us</h3> 
-<div class="otherbody">
+    </nav>
+
+    <div class="otherbody">
 <div class = "container2">
   <form action="#" class="form">
     <h2>CONTACT US</h2>
@@ -65,6 +66,12 @@
   </div>
 </div>
 </div>
-<footer><p>Kyle Vasquez,
-    Bachelor of Computer Science | Year 2</p></footer>
+
+  <footer>
+      <p>Kyle T. Vasquez</p>
+      <p>Bachelor of Computer Science | Year 2</p>
+  </footer>
+
+  
+
 </body>
