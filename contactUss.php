@@ -27,7 +27,7 @@
               <a class="nav-link" href="register.php#registrationForm">Register</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="aboutUs.php">About Us</a>
+              <a class="nav-link" href="aboutUss.php">About Us</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="contactUs.php">Contact Us</a>
@@ -68,7 +68,7 @@
 </div>
 
   <footer>
-      <p>Peter Sylvan L. Vecina</p>
+      <p>Kyle T. Vasquez</p>
       <p>Bachelor of Computer Science | Year 2</p>
   </footer>
 

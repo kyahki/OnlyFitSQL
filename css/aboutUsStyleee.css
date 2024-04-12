@@ -1,38 +1,32 @@
-body {
-    font-family: 'Montserrat';
-    margin: 0;
-    padding: 0;
-    /* background: linear-gradient(135deg, #667eea 0%, #5b4670 100%); */
-    background-color: #031620;
-    color: #ffa500;
-}
+
 .navbar-brand img {
     height: 30px; 
   }
 
-.image-container {
-    width: 500px;
-    height: 200px;
-}
-
-.image-container img {
-    width: 500px;
-    height: auto;
-    display: block;
-}
 a {
     color: #031620;;
 }
 
 a:hover {
     font-weight: 1000;
-    color: #031620;
+    color: #031620;;
 }
 
+body {
+    font-family: 'Montserrat';
+    margin: 0;
+    padding: 0;
+    background-color: #031620;
+    color: #ffa500;
+}
+
+.nav-link {
+    color: white;
+}
 
 header {
-    background-color: #ffa500;
-    color: #031620;
+    background-color: #ffa500; 
+    color: #031620;;
     padding: 20px;
     text-align: center;
     font-size: 30px;
@@ -41,8 +35,8 @@ header {
 }
 
 footer {
-    background-color: #ffa500;
-    color: #031620;
+    background-color: #ffa500; 
+    color: #031620;;
     padding: 20px;
     text-align: center;
     font-size: 16px;
@@ -55,7 +49,7 @@ footer p {
 .about-section {
     background-color: #ffa500;
     color: #031620;
-    padding: 20px;
+    padding: 2%;
     text-align: center;
     font-size: 30px;
     font-weight: 100;
@@ -65,6 +59,7 @@ footer p {
 *, *:before, *:after {
     box-sizing: inherit;
 }
+
 .row{
     background-color: #031620;;
 }
@@ -111,3 +106,4 @@ footer p {
         display: block;
     }
 }
+
