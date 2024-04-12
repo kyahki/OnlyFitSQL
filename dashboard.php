@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no,viewport-fit=cover">
     <title>OnlyFit</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link href="css/indexStylee.css" rel="stylesheet">
+    <link href="css/indexStyle.css" rel="stylesheet">
 </head>
 <body>
     <header>OnlyFit</header>
@@ -22,16 +22,16 @@
           
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" style="color:white" href="register.php#registrationForm">Register</a>
+              <a class="nav-link" href="register.php#registrationForm">Register</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" style="color:white" href="login.php#LogCard">Login</a>
+              <a class="nav-link" href="login.php#LogCard">Login</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" style="color:white" href="aboutUs.php">About Us</a>
+              <a class="nav-link" href="aboutUs.php">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" style="color:white" href="contactUs.php">Contact Us</a>
+              <a class="nav-link" href="contactUs.php">Contact Us</a>
             </li>
           </ul>
         </div>

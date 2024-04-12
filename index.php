@@ -36,37 +36,7 @@
           </ul>
         </div>
       </nav>
-
-    <div>
-        <table>
-            <thead>
-                <tr>
-                    <th>Seq Number</th>
-                    <th>Firstname</th>
-                    <th>Lastname</th>
-                    <th>Birthdate</th>
-                    <th>Gender</th>
-                    <th>Height</th>
-                    <th>Weight</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-                    while($row = $resultset->fetch_assoc()):
-                ?>
-                <tr>
-                    <td><?php echo $row['userid'] ?></td>
-                    <td><?php echo $row['firstname'] ?></td>
-                    <td><?php echo $row['lastname'] ?></td>
-                    <td><?php echo $row['birthdate'] ?></td>
-                    <td><?php echo $row['gender'] ?></td>
-                    <td><?php echo $row['height'] ?></td>
-                    <td><?php echo $row['weight'] ?></td>
-                </tr>
-                <?php endwhile;?>
-            </tbody>
-        </table>
-    </div>
+      
     <footer>
         <p>Peter Sylvan L. Vecina | Kyle T. Vasquez</p>
         <p>Bachelor of Computer Science | Year 2</p>

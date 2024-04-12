@@ -19,8 +19,8 @@ function showPopupMessage(message) {
     popup.style.zIndex = '9999';
     popup.style.color = '#ffa500'
 
-    popup.innerHTML = '<p style="font-size: 25px; color: white;">' + message + '</p>';
-    popup.innerHTML += '<a id="redirectButton" href="index.php" style="font-size: 20px; text-decoration: none; margin-top: 10px;">Back to main website</a>';
+    popup.innerHTML = '<p style="font-size: 25px; color:#ffa500;">' + message + '</p>';
+    popup.innerHTML += '<a id="redirectButton" href="index.php" style="font-size: 20px; text-decoration: none; margin-top: 10px; color:#ffa500;">Back to main website</a>';
 
     document.body.appendChild(popup);
 }
@@ -40,8 +40,8 @@ function showPopupMessage1(message) {
     popup.style.zIndex = '9999';
     popup.style.color = '#ffa500'
 
-    popup.innerHTML = '<p style="font-size: 25px; color: white;">' + message + '</p>';
-    popup.innerHTML += '<a id="redirectButton" href="login.php#LogCard" style="font-size: 20px; text-decoration: none; margin-top: 10px;">Log in now.</a>';
+    popup.innerHTML = '<p style="font-size: 25px; color:#ffa500;">' + message + '</p>';
+    popup.innerHTML += '<a id="redirectButton" href="login.php#LogCard" style="font-size: 20px; text-decoration: none; margin-top: 10px; color: #ffa500;">Log in now.</a>';
 
     document.body.appendChild(popup);
 }
