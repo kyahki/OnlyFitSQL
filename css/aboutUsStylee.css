@@ -20,7 +20,9 @@ body {
     height: auto;
     display: block;
 }
-
+a {
+    color: #031620;;
+}
 
 a:hover {
     font-weight: 1000;
@@ -49,9 +51,6 @@ footer {
 footer p {
     margin: 5px 0;
 }
-a {
-    color: #031620;;
-}
 
 .about-section {
     background-color: #ffa500;
@@ -76,10 +75,6 @@ a {
     padding: 0 8px;
 }
 
-a:hover {
-    font-weight: 1000;
-    color: #031620;
-}
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     margin: 8px 4px; 
