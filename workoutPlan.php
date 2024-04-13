@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no,viewport-fit=cover">
     <title>OnlyFit</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link href="css/indexStylee.css" rel="stylesheet">
+    <link href="css/workoutPlanStyle.css" rel="stylesheet">
 </head>
 <body>
     <header>OnlyFit</header>
@@ -41,15 +41,34 @@
       </nav>
       <br>
       <br>
-      <div class="center">
-          <a href="pushPlan.php" class="button">Make Push Workout Plan</a>
+      <table>
+            <tr>
+                <th colspan="2" style="text-align: center; font-size: 35px;">Workout Plans</th>
+            </tr>
+            <tr>
+                <td><a href="pushPlan.php" class="button">Make Push Workout Plan</a></td>
+                <td><a href="pullPlan.php" class="button">Make Pull Workout Plan</a></td>
+            </tr>
+            <tr>
+                <td> <a href="legPlan.php" class="button">Make Leg Workout Plan</a></td>
+                <td><a href="calisthenicsPlan.php" class="button">Make Calisthenics Workout Plan</a></td>
+            </tr>
+            <tr>
+                <td colspan="2"><a href="customPlan.php" class="button">Make Custom Workout Plan</a></td>
+                
+            </tr>
+            
+        </table>
+        
+      <!-- <div class="center">
+          
       </div>
         <div class="center">
-          <a href="pullPlan.php" class="button">Make Pull Workout Plan</a>
+          
       </div>
       <div class="center">
-          <a href="legPlan.php" class="button">Make Legs Workout Plan</a>
-      </div>
+         
+      </div> -->
       
     <footer>
         <p>Peter Sylvan L. Vecina | Kyle T. Vasquez</p>
