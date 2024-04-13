@@ -1,7 +1,7 @@
 
 <?php
     include 'connect.php';
-    $sql = "SELECT * FROM tbluserprofile";
+    $sql = "SELECT * FROM tblworkoutplan";
     $resultset = mysqli_query($connection, $sql);
 ?>
 
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no,viewport-fit=cover">
     <title>OnlyFit</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link href="css/indexStylee.css" rel="stylesheet">
+    <link href="css/workoutPlans.css" rel="stylesheet">
 </head>
 <body>
     <header>OnlyFit</header>
@@ -21,6 +21,9 @@
           </a>
           
           <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+              <a class="nav-link" href="index.php">Home</a>
+            </li>
             <li class="nav-item">
               <a class="nav-link" href="register.php#registrationForm">Register</a>
             </li>
@@ -33,17 +36,33 @@
             <li class="nav-item">
               <a class="nav-link" href="contactUs.php">Contact Us</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="workoutPlans.php">Workout Plans</a>
-            </li>
+            
           </ul>
         </div>
       </nav>
-      <br>
-      <br>
-      <div class="center">
-          <a href="workoutPlan.php" class="button">Make Workout Plan</a>
-      </div>
+
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Plan ID</th>
+                    <th>Workout Plan Type</th>
+                    <th>Workout Plan Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                    while($row = $resultset->fetch_assoc()):
+                ?>
+                <tr>
+                    <td><?php echo $row['planid'] ?></td>
+                    <td><?php echo $row['workoutplantype'] ?></td>
+                    <td><?php echo $row['workoutplandescription'] ?></td>
+                </tr>
+                <?php endwhile;?>
+            </tbody>
+        </table>
+    </div>
     <footer>
         <p>Peter Sylvan L. Vecina | Kyle T. Vasquez</p>
         <p>Bachelor of Computer Science | Year 2</p>

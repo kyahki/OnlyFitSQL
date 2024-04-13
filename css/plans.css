@@ -53,14 +53,8 @@ footer p {
     margin: 5px 0;
 }
 
-
-.center {
-    text-align: center;
-    margin: 3.5%;
-}
-
 .button {
-    padding: 2% 4%;
+    padding: 20px 40px;
     font-size: 16px;
     background-color: #ffa500;
     color: #031620;
@@ -73,6 +67,36 @@ footer p {
     font-size: 25px;
 }
 
+    
+
+.about-section {
+    background-color: #ffa500;
+    color: #031620;
+    padding: 2%;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 100;
+    
+}
 .button:hover {
     background-color: #814a10;
+}
+
+.btnPrimaryA {
+    background-color: #031620;
+    border: 2px solid #ffa500;
+    border-radius: 20px;
+    padding-left: 45%;
+    padding-right: 44%;
+    font-size: 30px;
+    color: #ffa500;
+}
+
+.inputErr {
+    color: #BA423C; 
+    background-color: #ffa500; 
+    padding-left: 35%; 
+    padding-right: 35%; 
+    padding-top: 10px; 
+    padding-bottom: 10px;
 }
