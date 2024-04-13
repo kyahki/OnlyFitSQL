@@ -53,14 +53,30 @@ footer p {
     margin: 5px 0;
 }
 
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffa500;
+    color: #031620;
+}
+
+th, td {
+    border: 1px solid #031620;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #ffa500;
+}
 
 .center {
     text-align: center;
-    margin: 3.5%;
+    margin: 350px;
 }
 
 .button {
-    padding: 2% 4%;
+    padding: 20px 40px;
     font-size: 16px;
     background-color: #ffa500;
     color: #031620;
@@ -76,3 +92,4 @@ footer p {
 .button:hover {
     background-color: #814a10;
 }
+

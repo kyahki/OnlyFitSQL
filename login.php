@@ -117,7 +117,7 @@
           $row = mysqli_fetch_assoc($sqlQuery);
           if(password_verify($password, $row['password'])) {
               echo "<script>
-              window.location.href = 'dashboard.php'</script>";
+              window.location.href = 'workoutPlans.php'</script>";
               exit();
           }else{
               echo "<script>showMessage('Incorrect password.');</script>";

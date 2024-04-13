@@ -42,8 +42,15 @@
       <br>
       <br>
       <div class="center">
-          <a href="workoutPlan.php" class="button">Make Workout Plan</a>
+          <a href="pushPlan.php" class="button">Make Push Workout Plan</a>
       </div>
+        <div class="center">
+          <a href="pullPlan.php" class="button">Make Pull Workout Plan</a>
+      </div>
+      <div class="center">
+          <a href="legPlan.php" class="button">Make Legs Workout Plan</a>
+      </div>
+      
     <footer>
         <p>Peter Sylvan L. Vecina | Kyle T. Vasquez</p>
         <p>Bachelor of Computer Science | Year 2</p>
