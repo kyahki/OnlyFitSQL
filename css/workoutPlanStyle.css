@@ -1,0 +1,95 @@
+body {
+    font-family: 'Montserrat';
+    margin: 0;
+    padding: 0;
+    /* background: linear-gradient(135deg, #667eea 0%, #5b4670 100%); */
+    background-color: #031620;
+    color: #ffa500;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link:hover {
+    color: #814a10;
+}
+
+.navbar-brand img {
+    height: 30px; 
+  }
+
+.image-container {
+    width: 500px;
+    height: 200px;
+}
+
+.image-container img {
+    width: 500px;
+    height: auto;
+    display: block;
+}
+
+.nav-link {
+    color:#ffa500;
+}
+
+
+header {
+    background-color: #ffa500;
+    color: #031620;
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+footer {
+    background-color: #ffa500;
+    color: #031620;
+    padding: 20px;
+    text-align: center;
+    font-size: 16px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffa500;
+    color: #031620;
+}
+
+th, td {
+    border: 1px solid #031620;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #ffa500;
+}
+
+.center {
+    text-align: center;
+    margin: 350px;
+}
+
+.button {
+    padding: 20px 40px;
+    font-size: 16px;
+    background-color: #ffa500;
+    color: #031620;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.button:hover {
+    background-color: #814a10;
+}
+

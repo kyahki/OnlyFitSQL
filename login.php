@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no,viewport-fit=cover">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/loginStyle.css" rel="stylesheet">
+    <link href="css/loginStylee.css" rel="stylesheet">
     <link href="css/loginMessage.css" rel="stylesheet">
     <script src="js/script1.js"></script>
     <title>OnlyFit</title>
@@ -59,7 +59,7 @@
                       </div>
                   </form>
                   <div class="mt-3 text-center">
-                      <p>Don't have an account yet? <a style="color:#031620;" href="register.php#registrationForm">Register here</a></p>
+                      <p>Don't have an account yet? <a style="color:#031620;" href="register.php#registrationForm" class ="redirect-register">Register here</a></p>
                   </div>
               </div>
           </div>

@@ -3,17 +3,6 @@
     height: 30px; 
   }
 
-
-
-a {
-    color: #031620;;
-}
-
-a:hover {
-    font-weight: 1000;
-    color: #031620;;
-}
-
 body {
     font-family: 'Montserrat';
     margin: 0;
@@ -24,6 +13,10 @@ body {
 
 .nav-link {
     color: #ffa500;
+}
+
+.nav-link:hover {
+  color: #814a10;
 }
 
 header {

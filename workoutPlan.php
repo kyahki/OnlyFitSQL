@@ -22,6 +22,9 @@
           
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
+              <a class="nav-link" href="index.php">Home</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="register.php#registrationForm">Register</a>
             </li>
             <li class="nav-item">

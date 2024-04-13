@@ -1,25 +1,36 @@
-.card {
-    color: #031620;
-    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
-    margin: 8px 4px; 
-    /* border: 2px solid #031620;  */
-    border-radius: 10px; 
-    background: #ffa500;
-    padding: 15px; 
-    width: 100%;
-}
-
-.navbar-light .navbar-nav .nav-link {
-    color: #ffa500;
-}
 
 .navbar-brand img {
     height: 30px; 
 }
 
-a:hover {
-    font-weight: 1000;
-    color: #031620;
+.navbar-expand-lg .navbar-nav .nav-link:hover {
+    color: #814a10;
+}
+
+.card {
+    color: #031620;;
+    box-shadow: #031620;;
+    margin: 8px 4px; 
+    border-radius: 10px; 
+    background: #ffa500;
+    padding: 15px; 
+    width: 100%;
+    font-size: 25px;
+}
+
+.btnPrimaryA {
+    background-color: #031620;;
+    border: 2px solid #ffa500;
+    border-radius: 20px;
+    padding-left: 45%;
+    padding-right: 44%;
+    color: #ffa500;
+}
+
+.inputErr {
+    color: #BA423C; 
+    background-color: #ffa500; 
+    padding: 10px;
 }
 
 .form-control {
@@ -38,18 +49,9 @@ a:hover {
     transition: all 0.2s ease 0s;
 }
 
-::placeholder {
+a:hover {
+    font-weight: 1000;
     color: #031620;
-}
-
-.btnPrimaryA {
-    background-color: #031620;
-    border: 2px solid #ffa500;
-    border-radius: 20px;
-    padding-left: 45%;
-    padding-right: 44%;
-    font-size: 30px;
-    color: #ffa500;
 }
 
 body {
@@ -60,18 +62,13 @@ body {
     color: #ffa500;
 }
 
-a {
-    color: #031620;;
-}
-
-a:hover {
-    font-weight: 1000;
-    color: #031620;;
+a.nav-link {
+    color: #ffa500;
 }
 
 header {
     background-color: #ffa500; 
-    color: #031620;
+    color: #031620;;
     padding: 20px;
     text-align: center;
     font-size: 30px;
@@ -81,7 +78,7 @@ header {
 
 footer {
     background-color: #ffa500; 
-    color: #031620;
+    color: #031620;;
     padding: 20px;
     text-align: center;
     font-size: 16px;
@@ -89,13 +86,4 @@ footer {
 
 footer p {
     margin: 5px 0;
-}
-
-.inputErr {
-    color: #BA423C; 
-    background-color: #ffa500; 
-    padding-left: 35%; 
-    padding-right: 35%; 
-    padding-top: 10px; 
-    padding-bottom: 10px;
 }
