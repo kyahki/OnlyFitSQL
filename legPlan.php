@@ -11,7 +11,7 @@ $resultset = mysqli_query($connection, $sql);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OnlyFit</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link href="css/plans2.css" rel="stylesheet">
+    <link href="css/plans.css" rel="stylesheet">
 </head>
 <body>
     <header>OnlyFit</header>
@@ -44,7 +44,7 @@ $resultset = mysqli_query($connection, $sql);
     <br>
 <br>
 <br>
-    <br>
+<br>
 <br>
 <br>
 <div class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
@@ -66,7 +66,8 @@ $resultset = mysqli_query($connection, $sql);
 <br>
 <br>
 <br>
-
+<br>
+<br>
 
     <footer>
         <p>Peter Sylvan L. Vecina | Kyle T. Vasquez</p>
@@ -82,6 +83,9 @@ $resultset = mysqli_query($connection, $sql);
         mysqli_stmt_bind_param($stmt, "ss", $workoutplandescription, $workoutplantype);
         mysqli_stmt_execute($stmt);
         echo "<script>alert('Workout plan created successfully!');</script>";
+        echo "<script>
+              window.location.href = 'exercise.php'</script>";
+              exit();
         mysqli_stmt_close($stmt);
     }
     ?>
