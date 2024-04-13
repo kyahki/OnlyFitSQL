@@ -12,6 +12,7 @@ $resultset = mysqli_query($connection, $sql);
     <title>OnlyFit</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href="css/plans.css" rel="stylesheet">
+    <script src="js/script.js"></script>
 </head>
 <body>
     <header>OnlyFit</header>
@@ -83,7 +84,6 @@ $resultset = mysqli_query($connection, $sql);
         $stmt = mysqli_prepare($connection, $sql);
         mysqli_stmt_bind_param($stmt, "ss", $workoutplandescription, $workoutplantype);
         mysqli_stmt_execute($stmt);
-        echo "<script>alert('Workout plan created successfully!');</script>";
         echo "<script>
               window.location.href = 'exercise.php'</script>";
               exit();

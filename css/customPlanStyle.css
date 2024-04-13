@@ -59,6 +59,7 @@ table {
     background-color: #ffa500;
     color: #031620;
     margin: 0 auto;
+    margin-bottom: 50px;
     font-size: 22px;
     height: 75vh;
 }
@@ -69,27 +70,29 @@ th, td {
     text-align: center;
 }
 
-/* .button {
-    font-size: 5px;
-    color: #031620;
-    border-radius: black 5px;
-    font-weight: bold;
-    font-size: 25px;
-} */
-.button {
+.form-control {
+    width: 100%;
+    appearance: none;
+    border-width: 0px;
+    box-shadow: currentcolor 0px 0px 0px 1px;
+    border-style: solid;
+    border-radius: 6px;
+    background: transparent;
+    color: inherit;
+    padding: 8px;
+    font-weight: 700;
     font-size: 16px;
-    background-color: #ffa500;
+    margin-top: 8px;
+    transition: all 0.2s ease 0s;
+}
+
+::placeholder {
     color: #031620;
-    text-decoration: none;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    font-weight: bold;
-    font-size: 25px;
 }
 
-.button:hover {
-    background-color: #814a10;
+button {
+    background-color: #031620;
+    color: #ffa500;
+    padding: 10px;
+    border-radius: 20px;
 }
-

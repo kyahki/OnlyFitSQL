@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no,viewport-fit=cover">
     <title>OnlyFit</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link href="css/workoutPlanStyle.css" rel="stylesheet">
+    <link href="css/workoutPlanStylee.css" rel="stylesheet">
 </head>
 <body>
     <header>OnlyFit</header>
@@ -43,15 +43,15 @@
       <br>
       <table>
             <tr>
-                <th colspan="2" style="text-align: center; font-size: 35px;">Workout Plans</th>
+                <th colspan="2" style="text-align: center; font-size: 30px;">Select Workout Plans</th>
             </tr>
             <tr>
-                <td><a href="pushPlan.php" class="button">Make Push Workout Plan</a></td>
-                <td><a href="pullPlan.php" class="button">Make Pull Workout Plan</a></td>
+                <td><a href="pushPlan.php" class="button">Push Workout Plan</a></td>
+                <td><a href="pullPlan.php" class="button">Pull Workout Plan</a></td>
             </tr>
             <tr>
-                <td> <a href="legPlan.php" class="button">Make Leg Workout Plan</a></td>
-                <td><a href="calisthenicsPlan.php" class="button">Make Calisthenics Workout Plan</a></td>
+                <td> <a href="legPlan.php" class="button">Leg Workout Plan</a></td>
+                <td><a href="calisthenicsPlan.php" class="button">Calisthenics Workout Plan</a></td>
             </tr>
             <tr>
                 <td colspan="2"><a href="customPlan.php" class="button">Make Custom Workout Plan</a></td>

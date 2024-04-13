@@ -54,42 +54,39 @@ footer p {
 }
 
 table {
-    width: 100%;
+    width: 40%;
     border-collapse: collapse;
     background-color: #ffa500;
     color: #031620;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    font-size: 22px;
+    height: 75vh;
 }
 
 th, td {
-    border: 1px solid #031620;
-    padding: 8px;
-    text-align: left;
-}
-
-th {
-    background-color: #ffa500;
-}
-
-.center {
+    border: 2px solid #031620;
+    padding: 10px;
     text-align: center;
-    margin: 350px;
 }
 
-.button {
-    padding: 20px 40px;
-    font-size: 16px;
-    background-color: #ffa500;
+/* .button {
+    font-size: 5px;
     color: #031620;
-    text-decoration: none;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    border-radius: black 5px;
     font-weight: bold;
     font-size: 25px;
+} */
+.button {
+    background-color: #031620;
+    color: #ffa500;
+    padding: 15px;
+    text-decoration: none;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 22px;
 }
 
-.button:hover {
-    background-color: #814a10;
-}
 

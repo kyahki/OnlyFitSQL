@@ -5,6 +5,8 @@
     $resultset = mysqli_query($connection, $sql);
     $row = mysqli_fetch_assoc($resultset);
     $planid = $row['planid'];
+    $sql1 = "SELECT * FROM tblexercise WHERE planid = $planid";
+    $resultset1 = mysqli_query($connection, $sql1);
 ?>
 
 <head>
@@ -12,7 +14,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no,viewport-fit=cover">
     <title>OnlyFit</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link href="css/exerciseStylee.css" rel="stylesheet">
+    <link href="css/exerciseStyleee.css" rel="stylesheet">
+    <script src="js/script.js"></script>
 </head>
 <body>
     <header>OnlyFit</header>
@@ -76,19 +79,10 @@
                 </td>
             </tr>
             <tr>
-                <td style="border-right: none; border-bottom: none;"><button type="submit" name="btnSubmit">Submit All</button></td>
-                <td style="border-left: none; border-bottom: none;"><button type="submit" name="btnSave">Save Exercise & Add Another</button></td>
+                <td colspan="2"><button type="submit" name="btnSave">Save Exercise & Add Another</button></td>
             </tr>
         </table>
     </form>
-    <br>
-    <br>
-    <br>
-    <footer>
-        <p>Peter Sylvan L. Vecina | Kyle T. Vasquez</p>
-        <p>Bachelor of Computer Science | Year 2</p>
-    </footer>
-
     <?php
     if(isset($_POST['btnSave'])){		
         // Retrieve data from form and save the value to a variable
@@ -102,24 +96,60 @@
         $sql = "INSERT INTO tblexercise(planid, exercisename, intensitylevel, sets, reps, typeofexercise) VALUES('$planid', '".$ename."', '".$intensity."', '$sets', '$reps', '".$type."')";
         mysqli_query($connection, $sql);
 
-        echo "<script>alert('Exercise added');</script>";
-    }    
-
-    if(isset($_POST['btnSubmit'])) {
-        $ename = $_POST['exercise'];		
-        $intensity = $_POST['intensity'];
-        $sets = $_POST['sets'];		
-        $reps = $_POST['reps'];
-        $type = $_POST['typeExercise'];
-        
-        $sql = "INSERT INTO tblexercise(planid, exercisename, intensitylevel, sets, reps, typeofexercise) VALUES('$planid', '".$ename."', '".$intensity."', '$sets', '$reps', '".$type."')";
-        mysqli_query($connection, $sql);
-        echo "<script>alert('List of exercises saved');</script>";
         echo "<script>
-              window.location.href = 'index.php'</script>";
-              exit();
-    }
+                  window.location.href = 'exercise.php'</script>";
+                  exit();
+    }    
     ?>
+    <br>
+    <br>
+    <br>
+    <div>
+        <form method="post">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Exercise name</th>
+                        <th>Intensity</th>
+                        <th>Sets</th>
+                        <th>Reps</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                        while($row1 = mysqli_fetch_assoc($resultset1)):
+                    ?>
+                    <tr>
+                        <td><?php echo $row1['exerciseID'] ?></td>
+                        <td><?php echo $row1['exercisename'] ?></td>
+                        <td><?php echo $row1['intensitylevel'] ?></td>
+                        <td><?php echo $row1['sets'] ?></td>
+                        <td><?php echo $row1['reps'] ?></td>
+                        <td><?php echo $row1['typeofexercise'] ?></td>
+                    </tr>
+                    <?php endwhile;?>
+                    <tr>
+                        <td colspan="6"><button type="submit" name="btnSubmit">Save All</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+
+    <?php
+        if(isset($_POST['btnSubmit'])) {
+            echo "<script>showPopupMessage2('List of exercises saved');</script>";
+        }
+    ?>
+    <br>
+    <br>
+    <br>
+    <footer>
+        <p>Peter Sylvan L. Vecina | Kyle T. Vasquez</p>
+        <p>Bachelor of Computer Science | Year 2</p>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
