@@ -3,6 +3,10 @@
     height: 30px; 
   }
 
+.navbar{
+    border-bottom: 1px solid #ffa500;
+}
+
 body {
     font-family: 'Montserrat';
     margin: 0;

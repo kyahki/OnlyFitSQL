@@ -1,4 +1,8 @@
 
+.navbar{
+    border-bottom: 1px solid #ffa500;
+}
+
 .navbar-brand img {
     height: 30px; 
 }

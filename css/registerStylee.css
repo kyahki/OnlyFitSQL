@@ -9,6 +9,10 @@
     width: 100%;
 }
 
+.navbar{
+    border-bottom: 1px solid #ffa500;
+}
+
 .navbar-light .navbar-nav .nav-link {
     color: #ffa500;
 }
