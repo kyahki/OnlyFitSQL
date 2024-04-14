@@ -94,16 +94,13 @@ footer p {
 .button {
     border: none;
     outline: 0;
-   display:block;
     padding: .8%;
     color:  #ffa500;
     background-color:#031620;
     text-align: center;
     cursor: pointer;
-    width: 90%;
-}
-.button:hover {
-    background-color: rgb(200, 133, 8);
+    width: 95%;
+    font-size: 25px;
 }
 
 @media screen and (max-width: 650px) {

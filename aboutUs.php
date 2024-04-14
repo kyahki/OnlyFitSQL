@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no,viewport-fit=cover">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/aboutUsStyle.css" rel="stylesheet">
+    <link href="css/aboutUsStylee.css" rel="stylesheet">
   
     <script src="js/script.js"></script>
     <title>OnlyFit</title>
@@ -46,7 +46,7 @@
   <div class="column">
     <div class="card">
     <div style="display: flex; justify-content: center; align-items: center;">
-        <img src="https://scontent.fceb3-1.fna.fbcdn.net/v/t39.30808-6/362251509_7184864161528775_734538607782179950_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFAK4P7JH4dUtrfrKazkTlQpIKvl203QwKkgq-XbTdDAlCkr5gvlCRzd3jxnWZWaxfiTtk5pJx6bWpHud2fTDRb&_nc_ohc=X15M0ZMiRiAAb7WfI-y&_nc_ht=scontent.fceb3-1.fna&oh=00_AfB2ZZpYqEFRLZLToLzAoJS3oLPQqNfZ3DU5Ny8yLxn3iA&oe=661DA96A" alt="Kyle" style="width:100%;">
+        <img src="images\kyleProfile.jpg" alt="Kyle" style="width:100%;">
     </div>
       <div class="container">
         <h2>Kyle Vasquez</h2>
@@ -64,7 +64,7 @@
   <div class="column">
     <div class="card">
     <div style="display: flex; justify-content: center; align-items: center;">
-        <img src="https://scontent.fceb3-1.fna.fbcdn.net/v/t39.30808-6/362251509_7184864161528775_734538607782179950_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFAK4P7JH4dUtrfrKazkTlQpIKvl203QwKkgq-XbTdDAlCkr5gvlCRzd3jxnWZWaxfiTtk5pJx6bWpHud2fTDRb&_nc_ohc=X15M0ZMiRiAAb7WfI-y&_nc_ht=scontent.fceb3-1.fna&oh=00_AfB2ZZpYqEFRLZLToLzAoJS3oLPQqNfZ3DU5Ny8yLxn3iA&oe=661DA96A" alt="Kyle" style="width:100%;">
+        <img src="images\peterProfile.jpg" alt="Kyle" style="width: 100%;" >
     </div>
       <div class="container">
         <h2>Peter Sylvan Vecina</h2>

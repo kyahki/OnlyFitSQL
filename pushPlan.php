@@ -52,7 +52,7 @@ $resultset = mysqli_query($connection, $sql);
         <p>"Push Day: It's time to target those upper body muscles with a high-intensity workout focused on pushing movements. Engage your chest, shoulders, and triceps as you press, lift, and push your way to strength and definition."</p>
         <p>The exercises in these will usually involve pushing movements using your chest, triceps, shoulders.</p>
         <p>Some examples would be:</p>
-        <img src="https://i.pinimg.com/736x/fe/93/b2/fe93b2cdefcfc9455acb147067fad962.jpg" width="75%" height="75%" alt="samplepush">
+        <img src="images\pushPlan.jpg" width="75%" height="75%" alt="samplepush">
         
         <form action="" method="post">
             <input type="hidden" name="workoutdesciprtion" value="Push Day: It's time to target those upper body muscles with a high-intensity workout focused on pushing movements. Engage your chest, shoulders, and triceps as you press, lift, and push your way to strength and definition. The exercises in these will usually involve pushing movements using your chest, triceps, shoulders.">

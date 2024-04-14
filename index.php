@@ -42,7 +42,7 @@
       <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <img src="https://img.freepik.com/free-photo/low-angle-view-unrecognizable-muscular-build-man-preparing-lifting-barbell-health-club_637285-2497.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1712966400&semt=sph" alt="Fitness Image" width="800" height="500">
+                <img src="images\indexStartingImage.avif" alt="Fitness Image" width="800" height="500">
                 <div class="hero-text">
                     <h1>WELCOME TO ONLYFIT</h1>
                     <p>Your ultimate fitness destination</p>

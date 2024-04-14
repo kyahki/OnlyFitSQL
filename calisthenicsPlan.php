@@ -52,7 +52,7 @@ $resultset = mysqli_query($connection, $sql);
             <p>"Calisthenics Plan: Enhance your strength, flexibility, and body control with bodyweight exercises. Utilize your own body as resistance to build muscle and improve overall fitness."</p>
             <p>The exercises in this plan will primarily involve bodyweight movements targeting various muscle groups.</p>
             <p>Some examples would be:</p>
-            <img src="https://fitnessprogramer.com/wp-content/uploads/2024/03/calisthenics-workout-plan.webp"  width="75%" height="75%" alt="sample_calisthenics_plan">
+            <img src="images\calPlan.webp"  width="75%" height="75%" alt="sample_calisthenics_plan">
             <form action="" method="post">
                 <input type="hidden" name="workoutdesciprtion" value="Calisthenics Plan: Enhance your strength, flexibility, and body control with bodyweight exercises. Utilize your own body as resistance to build muscle and improve overall fitness. The exercises in this plan will primarily involve bodyweight movements targeting various muscle groups.">
                 <input type="hidden" name="workouttype" value="calisthenics">

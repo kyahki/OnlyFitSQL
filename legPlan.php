@@ -55,7 +55,7 @@ $resultset = mysqli_query($connection, $sql);
             <p>"Leg Day: Strengthen and tone your lower body with a challenging leg workout. Target your quadriceps, hamstrings, glutes, and calves to build a powerful foundation and improve overall athleticism."</p>
             <p>The exercises in these will usually involve movements targeting your quadriceps, hamstrings, glutes, and calves.</p>
             <p>Some examples would be:</p>
-            <img src="https://i.pinimg.com/originals/b9/3c/3e/b93c3e936373ec223ef16924ac1e4903.jpg" width="75%" height="75%" alt="sample_leg_day">
+            <img src="images\legPlan.jpg" width="75%" height="75%" alt="sample_leg_day">
             <form action="" method="post">
                 <input type="hidden" name="workoutdesciprtion" value="Leg Day: Strengthen and tone your lower body with a challenging leg workout. Target your quadriceps, hamstrings, glutes, and calves to build a powerful foundation and improve overall athleticism. The exercises in these will usually involve movements targeting your quadriceps, hamstrings, glutes, and calves.">
                 <input type="hidden" name="workouttype" value="leg">
