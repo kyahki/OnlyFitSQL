@@ -52,7 +52,7 @@ $resultset = mysqli_query($connection, $sql);
             </tr>
             <tr>
                 <td>Workout Type: </td>
-                <td><input type="text" class="form-control" id="workouttype" name="workouttype" placeholder="Enter Workout Type" required></td>
+                <td><input type="text" class="form-control" id="workouttype" name="workouttype" placeholder="Enter workout type" required></td>
             </tr>
             <tr>
                 <td>Workout Description </td>
