@@ -39,6 +39,7 @@ header {
     font-size: 30px;
     font-weight: bold;
     text-transform: uppercase;
+    display: block;
 }
 
 footer {
@@ -93,3 +94,36 @@ th {
     background-color: #814a10;
 }
 
+.hero {
+    background-color: #031620;
+    color: #ffa500;
+    padding: 100px 0;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero img {
+    max-width: 100%;
+    height: auto;
+    margin-right: 50px; /* Adjust spacing between image and text */
+}
+
+.hero-text {
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 24px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no,viewport-fit=cover">
     <title>OnlyFit</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link href="css/indexStylee.css" rel="stylesheet">
+    <link href="css/indexStyleee.css" rel="stylesheet">
 </head>
 <body>
     <header>OnlyFit</header>
@@ -39,11 +39,22 @@
           </ul>
         </div>
       </nav>
+      <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <img src="https://img.freepik.com/free-photo/low-angle-view-unrecognizable-muscular-build-man-preparing-lifting-barbell-health-club_637285-2497.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1712966400&semt=sph" alt="Fitness Image" width="800" height="500">
+                <div class="hero-text">
+                    <h1>WELCOME TO ONLYFIT</h1>
+                    <p>Your ultimate fitness destination</p>
+                    <p>Start your journey to a healthier lifestyle today!</p>
+                    <br>
+                    <a href="workoutPlan.php" class="button">Make Workout Plan</a>
+                </div>
+            </div>
+        </div>
+      </section>
       <br>
       <br>
-      <div class="center">
-          <a href="workoutPlan.php" class="button">Make Workout Plan</a>
-      </div>
     <footer>
         <p>Peter Sylvan L. Vecina | Kyle T. Vasquez</p>
         <p>Bachelor of Computer Science | Year 2</p>

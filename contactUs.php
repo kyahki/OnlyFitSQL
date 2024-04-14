@@ -39,7 +39,7 @@
     <div class="otherbody">
 <div class = "container2">
   <form action="#" class="form">
-    <h2>CONTACT US</h2>
+    <h2 style="font-weight: bold;">CONTACT US</h2>
     <div class="input">
       <input type="text" autocomplete="off" name = "name" required>
       <label for="name">Name</label>
