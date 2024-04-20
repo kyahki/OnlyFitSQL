@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no,viewport-fit=cover">
     <title>OnlyFit</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link href="css/exerciseStyleee.css" rel="stylesheet">
+    <link href="css/exerciseStyle.css" rel="stylesheet">
     <script src="js/script.js"></script>
 </head>
 <body>
@@ -115,6 +115,7 @@
                         <th>Sets</th>
                         <th>Reps</th>
                         <th>Type</th>
+                        <th>Edit/Delete</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -128,10 +129,17 @@
                         <td><?php echo $row1['sets'] ?></td>
                         <td><?php echo $row1['reps'] ?></td>
                         <td><?php echo $row1['typeofexercise'] ?></td>
+                        <td>
+                            <a href="updateExercise.php?exerciseID=<?php echo $row1['exerciseID']; ?>">Edit</a>
+                            <form method="post" style="display: inline;">
+                                <input type="hidden" name="deleteExerciseID" value="<?php echo $row1['exerciseID']; ?>">
+                                <button type="submit" name="btnDelete" style="width: 100px;">Delete</button>
+                            </form>
+                        </td>
                     </tr>
                     <?php endwhile;?>
                     <tr>
-                        <td colspan="6"><button type="submit" name="btnSubmit">Save All</button></td>
+                        <td colspan="7"><button type="submit" name="btnSubmit">Save All</button></td>
                     </tr>
                 </tbody>
             </table>
@@ -142,6 +150,27 @@
         if(isset($_POST['btnSubmit'])) {
             echo "<script>showPopupMessage2('List of exercises saved');</script>";
         }
+
+        if(isset($_POST['btnDelete'])) {
+            if(isset($_POST['deleteExerciseID'])) {
+                $deleteExerciseID = $_POST['deleteExerciseID'];
+        
+                $deleteSql = "DELETE FROM tblexercise WHERE exerciseID = '$deleteExerciseID'";
+        
+                $deleteResult = mysqli_query($connection, $deleteSql);
+        
+                if($deleteResult) {
+                    echo "<script>window.location.href = 'exercise.php'</script>";
+                } 
+                // else {
+                //     echo "<script>alert('Error deleting exercise');</script>";
+                // }
+            } 
+            // else {
+            //     echo "<script>alert('Exercise ID not provided');</script>";
+            // }
+        }
+        
     ?>
     <br>
     <br>
