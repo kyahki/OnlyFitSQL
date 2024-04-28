@@ -1,14 +1,7 @@
 <?php
-    // Check if the exerciseID parameter is set in the URL
     if(isset($_GET['exerciseID'])) {
-        // Retrieve the exerciseID value from the URL
         $exerciseID = $_GET['exerciseID'];
-
-        // Connect to your database (assuming $connection is already defined)
         include 'connect.php';
-
-        // Make sure to properly escape and sanitize user input to prevent SQL injection
-        // Here, I'm assuming that $connection is the mysqli connection object
         $sql = "SELECT * FROM tblexercise WHERE exerciseID = '" . mysqli_real_escape_string($connection, $exerciseID) . "'";
         $resultset = mysqli_query($connection, $sql);
     }

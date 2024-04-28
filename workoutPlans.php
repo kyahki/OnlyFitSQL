@@ -13,7 +13,7 @@ session_start();
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no,viewport-fit=cover">
     <title>OnlyFit</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link href="css/workoutPlan.css" rel="stylesheet">
+    <link href="css/workoutPlann.css" rel="stylesheet">
 </head>
 <body>
     <header>OnlyFit</header>
@@ -51,11 +51,11 @@ session_start();
                 <tr>
                     <th colspan="4" style="font-size: 30px; text-align:center;">List of Workout Plans</th>
                 </tr>
-                <tr>
+                <tr style="font-size: 25px">
                     <th style="width:10%;">Plan ID</th>
                     <th style="width:10%;">Workout Plan Type</th>
                     <th style="width:50%;">Workout Plan Description</th>
-                    <th style="width:10%;">Edit/Delete</th>
+                    <th style="width:15%;">Edit/Delete</th>
                 </tr>
             </thead>
             <tbody>
@@ -70,12 +70,12 @@ session_start();
                     <?php
                    
                     $_SESSION['planid'] = $row['planid'];?>
-                   <td>
-                        <button style="display: inline;" onclick="window.location='updateworkoutplan.php';" class="btnPrimaryA" name="btnEdit">Edit</button>
+                    <td>
+                        <button style="display: inline; width: 100px;" onclick="window.location='updateworkoutplan.php';" class="btnPrimaryA" name="btnEdit">Edit</button>
                         <form method="post" style="display: inline;">
                         
                             <input type="hidden" name="planid" value="<?php echo $row['planid'] ?>">
-                            <button type="submit" class="btnPrimaryA" name="btnDelete">Delete</button>
+                            <button type="submit" class="btnPrimaryA" name="btnDelete" style="width: 100px;">Delete</button>
                         </form>
                     </td>
                 </tr>
@@ -105,15 +105,15 @@ session_start();
             <tr>
                 <th colspan="8" style="font-size: 30px; text-align:center;">List of Exercises</th>
             </tr>
-            <tr>
-                <th>ID</th>
-                <th>Plan ID</th>
-                <th>Exercise name</th>
-                <th>Intensity</th>
-                <th>Sets</th>
-                <th>Reps</th>
-                <th>Type</th>
-                <th>Edit/Delete</th>
+            <tr style="font-size: 25px">
+                <th style="width: 8%">ID</th>
+                <th style="width: 8%">Plan ID</th>
+                <th style="width: 15%">Exercise name</th>
+                <th style="width: 12%">Intensity</th>
+                <th style="width: 8%">Sets</th>
+                <th style="width: 8%">Reps</th>
+                <th style="width: 12%">Type</th>
+                <th style="width: 20%">Edit/Delete</th>
            
             </tr>
         </thead>
