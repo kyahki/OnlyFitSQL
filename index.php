@@ -55,6 +55,11 @@
       </section>
       <br>
       <br>
+      <a href="report.php" class="button" style="margin: 45%" >REPORT</a>
+      <br>
+      <br>
+      <br>
+      <br>
     <footer>
         <p>Peter Sylvan L. Vecina | Kyle T. Vasquez</p>
         <p>Bachelor of Computer Science | Year 2</p>
