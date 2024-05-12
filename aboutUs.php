@@ -45,8 +45,8 @@
     <div class="row">
   <div class="column">
     <div class="card">
-    <div style="display: flex; justify-content: center; align-items: center;">
-        <img src="images\kyleProfile.jpg" alt="Kyle" style="width:100%;">
+    <div style="display: flex; justify-content: center; align-items: center; height: 860px;">
+        <img src="images\kyleProfile.jpg" alt="Kyle" style="width:100%;height: 100%">
     </div>
       <div class="container">
         <h2>Kyle Vasquez</h2>
@@ -63,8 +63,8 @@
 
   <div class="column">
     <div class="card">
-    <div style="display: flex; justify-content: center; align-items: center;">
-        <img src="images\peterProfile.jpg" alt="Kyle" style="width: 100%;" >
+    <div style="display: flex; justify-content: center; align-items: center; height: 860px;">
+        <img src="images\peterimg.jpg" alt="Peter" style="width: 100%; height: 100%" >
     </div>
       <div class="container">
         <h2>Peter Sylvan Vecina</h2>
