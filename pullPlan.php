@@ -69,6 +69,7 @@ $resultset = mysqli_query($connection, $sql);
             <form action="" method="post">
                 <input type="hidden" name="workoutdesciprtion" value="Pull Day: Focus on strengthening your back, biceps, and forearms with pulling movements. Work on your posture and build a well-rounded physique by targeting muscles involved in pulling actions. The exercises in these will usually involve pulling movements using your back, biceps, and forearms.">
                 <input type="hidden" name="workouttype" value="pull">
+                <input type="hidden" name="isDelete" value="0">
                 <button type="submit" name="btnRegister" class="btnPrimaryA">Create Pull Workout Plan</button>
             </form>
       </div>
@@ -92,9 +93,10 @@ $resultset = mysqli_query($connection, $sql);
     if(isset($_POST['btnRegister'])){
         $workoutplandescription = mysqli_real_escape_string($connection, $_POST['workoutdesciprtion']);     
         $workoutplantype = mysqli_real_escape_string($connection, $_POST['workouttype']);
-        $sql = "INSERT INTO tblworkoutplan(workoutplandescription, workoutplantype) VALUES(?, ?)";
+        $isDelete = 0;
+        $sql = "INSERT INTO tblworkoutplan(workoutplandescription, workoutplantype, isDelete) VALUES(?, ?, ?)";
         $stmt = mysqli_prepare($connection, $sql);
-        mysqli_stmt_bind_param($stmt, "ss", $workoutplandescription, $workoutplantype);
+        mysqli_stmt_bind_param($stmt, "ssi", $workoutplandescription, $workoutplantype, $isDelete);
         mysqli_stmt_execute($stmt);
         echo "<script>
               window.location.href = 'exercise.php'</script>";

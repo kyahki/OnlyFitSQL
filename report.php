@@ -6,11 +6,12 @@ session_start();
     FROM tblworkoutplan 
     INNER JOIN tblexercise ON tblworkoutplan.planid = tblexercise.planid
     WHERE tblexercise.intensitylevel = 'Beginner'";
+    // WHERE tblexercise.intensitylevel = 'Beginner' AND tblexercise.isDeleted = 0"; dili ipakita kun flagged as 1
 
     $resultset = mysqli_query($connection, $sql);
 
     $sql1 = "SELECT * FROM tblexercise";
-    
+    // $sql1 = "SELECT * FROM tblexercise WHERE isDeleted = 0"; dili ipakita kun flagged as 1
     $resultset1 = mysqli_query($connection, $sql1);
 
     $sql2 = "SELECT tblexercise.exerciseID, tblexercise.planid, tblworkoutplan.workoutplantype, 
@@ -18,6 +19,7 @@ session_start();
     FROM tblworkoutplan 
     INNER JOIN tblexercise ON tblworkoutplan.planid = tblexercise.planid
     WHERE tblexercise.typeofexercise = 'Endurance'";
+    // WHERE tblexercise.typeofexercise = 'Endurance' AND tblexercise.isDeleted = 0"; dili ipakita kun flagged as 1
 
     $resultset2 = mysqli_query($connection, $sql2);
 
@@ -26,6 +28,7 @@ session_start();
     FROM tblworkoutplan
     INNER JOIN tblexercise ON tblworkoutplan.planid = tblexercise.planid
     WHERE tblexercise.sets = 3 AND tblexercise.reps = 12";
+    // WHERE tblexercise.sets = 3 AND tblexercise.reps = 12 AND tblexercise.isDeleted = 0"; dili ipakita kun flagged as 1
 
     $resultset3 = mysqli_query($connection, $sql3);
        
@@ -221,6 +224,40 @@ session_start();
     </table>
     </div>
     <div>
+    <table class="table2">
+        <thead>
+            <tr>
+                <th class="th1" colspan="8" style="font-size: 30px; text-align:center;">List of Workout Plans</th>
+            </tr>
+            <tr style="font-size: 25px">
+                <th class="th1" style="width: 8%">ID</th>
+                <th class="th1" style="width: 8%">Plan ID</th>
+                <th class="th1" style="width: 15%">Exercise name</th>
+                <th class="th1" style="width: 12%">Intensity</th>
+                <th class="th1" style="width: 8%">Sets</th>
+                <th class="th1" style="width: 8%">Reps</th>
+                <th class="th1" style="width: 12%">Type</th>
+           
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+                while($row1 = mysqli_fetch_assoc($resultset1)):
+            ?>
+            <tr>
+                <td class="td1"><?php echo $row1['exerciseID'] ?></td>
+                <td class="td1"><?php echo $row1['planid'] ?></td>
+                <td class="td1"><?php echo $row1['exercisename'] ?></td>
+                <td class="td1"><?php echo $row1['intensitylevel'] ?></td>
+                <td class="td1"><?php echo $row1['sets'] ?></td>
+                <td class="td1"><?php echo $row1['reps'] ?></td>
+                <td class="td1"><?php echo $row1['typeofexercise'] ?></td>
+            </tr>
+            <?php endwhile;?>
+        </tbody>
+    </table>
+    </div>
+    <div>
         <table class="table2">
             <thead>
                 <tr>
@@ -337,7 +374,7 @@ session_start();
             </tbody>
         </table>
     </div> -->
-
+    
     <div class="container">
     <div class="row justify-content-center align-items-center" style="height: 100vh;">
     <div class="col-md-6">
@@ -362,6 +399,22 @@ session_start();
             </div>
         </div>
     </div>  
+</div>
+<br>
+<br>
+<br>
+<br>
+<div class="statistics-chart">
+    <h2>BAR CHART FOR WORKOUT PLANS</h2>
+    <br>
+    <hr>
+    <div class="chart">
+        <div class="bar push" style="height: 690px;">Push: 69</div>
+        <div class="bar pull" style="height: 420px;">Pull: 42</div>
+        <div class="bar legs" style="height: 170px;">Legs: 17</div>
+        <div class="bar calisthenics" style="height: 330px;">Calisthenics: 33</div>
+        <div class="bar custom" style="height: 110px;">Custom Plans: 11</div>
+    </div>
 </div>
 <br>
 <br>
