@@ -112,3 +112,14 @@ a {
     text-decoration: none;
     font-size: 22px;
 }
+
+.card {
+    color: #031620;;
+    box-shadow: #031620;;
+    margin: 4px; 
+    border-radius: 10px; 
+    background: #ffa500;
+    padding: 15px; 
+    width: 100%;
+    font-size: 25px;
+}

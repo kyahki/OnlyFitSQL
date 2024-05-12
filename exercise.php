@@ -57,7 +57,13 @@
             </tr>
             <tr>
                 <td>Intensity Level: </td>
-                <td><input type="text" class="form-control" id="intensity" name="intensity" placeholder="Enter intensity level (e.g Beginner)" required></td>
+                <td><select class="form-control" id="intensity" name="intensity" required>
+                        <option value="">Select Intensity Level</option>
+                        <option value="Beginner">Beginner</option>
+                        <option value="Moderate">Moderate</option>
+                        <option value="Advanced">Advanced</option>
+                    </select>
+                </td>
             </tr>
             <tr>
                 <td>Sets: </td>
