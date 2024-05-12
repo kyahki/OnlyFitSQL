@@ -7,12 +7,13 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no,viewport-fit=cover">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/aboutUsStyle.css" rel="stylesheet">
+    <link href="css/generalStyle.css" rel="stylesheet">
   
     <script src="js/script.js"></script>
     <title>OnlyFit</title>
 </head>
 <body>
-    <header>ONLYFIT</header>
+    <!-- <header>ONLYFIT</header>
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container" style="font-size: 22px; font-weight: bold">
           <a class="navbar-brand" href="#">
@@ -34,7 +35,18 @@
             </li>
           </ul>
         </div>
-    </nav>
+    </nav> -->
+    <header style="margin-bottom: 50px">
+        <table class="table1">
+          <tr">
+            <td class="thTitle" colspan="7">OnlyFit</td>
+            <th class="thData"><a class="nav-link" href="index.php">Home</a></th>
+            <th class="thData"><a class="nav-link" href="register.php#registrationForm">Register</a></th>
+            <th class="thData"><a class="nav-link" href="login.php#LogCard">Login</a></th>
+            <th class="thData"><a class="nav-link" href="contactUs.php">Contact Us</a></th>
+          </tr>
+        </table>
+      </header>
     <div class="about-section">
         <h1><b>About Us Page</b></h1>
         <p>We are the CEO's of the OnlyFit App</p>

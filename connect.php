@@ -1,5 +1,5 @@
 <?php 
-	$connection = new mysqli('localhost', 'root','','dbvasquez');
+	$connection = new mysqli('localhost', 'root','','dbvecina');
 	
 	if (!$connection){
 		die (mysqli_error($mysqli));

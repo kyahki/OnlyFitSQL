@@ -14,16 +14,18 @@ $resultset = mysqli_query($connection, $sql);
     <title>OnlyFit</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href="css/updateWorkoutPlan.css" rel="stylesheet">
+    <link href="css/generalStyle.css" rel="stylesheet">
+
     <script src="js/script.js"></script>
 </head>
 <body>
-    <header>OnlyFit</header>
+    <!-- <header>OnlyFit</header>
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container" style="font-size: 22px; font-weight: bold">
           <a class="navbar-brand" href="#">
             <img src="path_to_your_logo.png" alt="Logo">
           </a>
-         
+          
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
               <a class="nav-link" href="register.php#registrationForm">Register</a>
@@ -42,27 +44,39 @@ $resultset = mysqli_query($connection, $sql);
             </li>
           </ul>
         </div>
-    </nav>
+    </nav> -->
+    <header>
+        <table class="table1">
+          <tr>
+            <td class="thTitle" colspan="7">OnlyFit</td>
+            <th class="thData"><a class="nav-link" href="index.php">Home</a></th>
+            <th class="thData"><a class="nav-link" href="register.php#registrationForm">Register</a></th>
+            <th class="thData"><a class="nav-link" href="login.php#LogCard">Login</a></th>
+            <th class="thData"><a class="nav-link" href="aboutUs.php">About Us</a></th>
+            <th class="thData"><a class="nav-link" href="contactUs.php">Contact Us</a></th>
+          </tr>
+        </table>
+      </header>
     <br>
     <br>
     <br>
    
     <form method="post">
-        <table>
+        <table class="table2">
             <tr>
-                <th colspan="2" style="text-align: center; font-size: 35px;">Edit Workout Plan</th>
+                <th class="th1" colspan="2" style="text-align: center; font-size: 35px;">Edit Workout Plan</th>
             </tr>
             <tr>
-                <td>Place New Workout Type: </td>
-                <td><input type="text" class="form-control" id="workouttype" name="workouttype" placeholder="Enter workout type" required></td>
-            </tr>
+                <td class="td1">Place New Workout Type: </td>
+                <td class="td1"><input type="text" class="form-control" id="workouttype" name="workouttype" placeholder="Enter workout type" required></td>
+            </tr> 
             <tr>
-                <td>Place New Workout Description </td>
-                <td><textarea rows="4" cols="50" class="form-control" id="workoutdescription" name="workoutdescription"  placeholder="Enter workout description" required></textarea></td>
+                <td class="td1">Place New Workout Description </td>
+                <td class="td1"><textarea rows="4" cols="50" class="form-control" id="workoutdescription" name="workoutdescription"  placeholder="Enter workout description" required></textarea></td>
             </tr>
            
             <tr>
-                <td colspan = "2"style="border-right: none; border-bottom: none;"><button type="submit" name="btnSubmit">Submit</button></td>
+                <td class="td1" colspan = "2"style="border-right: none; border-bottom: none;"><button type="submit" name="btnSubmit">Submit</button></td>
             </tr>
         </table>
     </form>

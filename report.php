@@ -142,19 +142,18 @@ session_start();
     <title>OnlyFit</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href="css/reportStyle.css" rel="stylesheet">
+    <link href="css/generalStyle.css" rel="stylesheet">
+
 </head>
 <body>
-    <header>OnlyFit</header>
+    <!-- <header>OnlyFit</header>
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container" style="font-size: 22px; font-weight: bold">
           <a class="navbar-brand" href="#">
             <img src="path_to_your_logo.png" alt="Logo">
           </a>
-         
+          
           <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-              <a class="nav-link" href="index.php">Home</a>
-            </li>
             <li class="nav-item">
               <a class="nav-link" href="register.php#registrationForm">Register</a>
             </li>
@@ -167,26 +166,40 @@ session_start();
             <li class="nav-item">
               <a class="nav-link" href="contactUs.php">Contact Us</a>
             </li>
-           
+            <li class="nav-item">
+              <a class="nav-link" href="index.php">Go Back Home</a>
+            </li>
           </ul>
         </div>
-      </nav>
+    </nav> -->
+    <header>
+        <table class="table1">
+          <tr>
+            <td class="thTitle" colspan="7">OnlyFit</td>
+            <th class="thData"><a class="nav-link" href="index.php">Home</a></th>
+            <th class="thData"><a class="nav-link" href="register.php#registrationForm">Register</a></th>
+            <th class="thData"><a class="nav-link" href="login.php#LogCard">Login</a></th>
+            <th class="thData"><a class="nav-link" href="aboutUs.php">About Us</a></th>
+            <th class="thData"><a class="nav-link" href="contactUs.php">Contact Us</a></th>
+          </tr>
+        </table>
+      </header>
     <br>
     <br>
     <div>
-    <table>
+    <table class="table2">
         <thead>
             <tr>
-                <th colspan="8" style="font-size: 30px; text-align:center;">List of Exercises</th>
+                <th class="th1" colspan="8" style="font-size: 30px; text-align:center;">List of Exercises</th>
             </tr>
             <tr style="font-size: 25px">
-                <th style="width: 8%">ID</th>
-                <th style="width: 8%">Plan ID</th>
-                <th style="width: 15%">Exercise name</th>
-                <th style="width: 12%">Intensity</th>
-                <th style="width: 8%">Sets</th>
-                <th style="width: 8%">Reps</th>
-                <th style="width: 12%">Type</th>
+                <th class="th1" style="width: 8%">ID</th>
+                <th class="th1" style="width: 8%">Plan ID</th>
+                <th class="th1" style="width: 15%">Exercise name</th>
+                <th class="th1" style="width: 12%">Intensity</th>
+                <th class="th1" style="width: 8%">Sets</th>
+                <th class="th1" style="width: 8%">Reps</th>
+                <th class="th1" style="width: 12%">Type</th>
            
             </tr>
         </thead>
@@ -195,30 +208,30 @@ session_start();
                 while($row1 = mysqli_fetch_assoc($resultset1)):
             ?>
             <tr>
-                <td><?php echo $row1['exerciseID'] ?></td>
-                <td><?php echo $row1['planid'] ?></td>
-                <td><?php echo $row1['exercisename'] ?></td>
-                <td><?php echo $row1['intensitylevel'] ?></td>
-                <td><?php echo $row1['sets'] ?></td>
-                <td><?php echo $row1['reps'] ?></td>
-                <td><?php echo $row1['typeofexercise'] ?></td>
+                <td class="td1"><?php echo $row1['exerciseID'] ?></td>
+                <td class="td1"><?php echo $row1['planid'] ?></td>
+                <td class="td1"><?php echo $row1['exercisename'] ?></td>
+                <td class="td1"><?php echo $row1['intensitylevel'] ?></td>
+                <td class="td1"><?php echo $row1['sets'] ?></td>
+                <td class="td1"><?php echo $row1['reps'] ?></td>
+                <td class="td1"><?php echo $row1['typeofexercise'] ?></td>
             </tr>
             <?php endwhile;?>
         </tbody>
     </table>
     </div>
     <div>
-        <table>
+        <table class="table2">
             <thead>
                 <tr>
-                    <th colspan="5" style="font-size: 30px; text-align:center;">Exercises with Beginner Intensity</th>
+                    <th class="th1" colspan="5" style="font-size: 30px; text-align:center;">Exercises with Beginner Intensity</th>
                 </tr>
                 <tr style="font-size: 25px">
-                    <th style="width:10%;">ID</th>
-                    <th style="width:10%;">Plan ID</th>
-                    <th style="width:15%;">Workout Plan Type</th>
-                    <th style="width:20%;">Exercise Name</th>
-                    <th style="width:20%;">Type of Exercise</th>
+                    <th class="th1" style="width:10%;">ID</th>
+                    <th class="th1" style="width:10%;">Plan ID</th>
+                    <th class="th1" style="width:15%;">Workout Plan Type</th>
+                    <th class="th1" style="width:20%;">Exercise Name</th>
+                    <th class="th1" style="width:20%;">Type of Exercise</th>
                 </tr>
             </thead>
             <tbody>
@@ -226,28 +239,28 @@ session_start();
                     while($row = $resultset->fetch_assoc()):
                 ?>
                 <tr>
-                    <td><?php echo $row['exerciseID'] ?></td>
-                    <td><?php echo $row['planid'] ?></td>
-                    <td><?php echo $row['workoutplantype'] ?></td>
-                    <td><?php echo $row['exercisename'] ?></td>
-                    <td><?php echo $row['typeofexercise'] ?></td>
+                    <td class="td1"><?php echo $row['exerciseID'] ?></td>
+                    <td class="td1"><?php echo $row['planid'] ?></td>
+                    <td class="td1"><?php echo $row['workoutplantype'] ?></td>
+                    <td class="td1"><?php echo $row['exercisename'] ?></td>
+                    <td class="td1"><?php echo $row['typeofexercise'] ?></td>
                 </tr>
                 <?php endwhile;?>
             </tbody>
         </table>
     </div>
     <div>
-        <table>
+        <table class="table2">
             <thead>
                 <tr>
-                    <th colspan="5" style="font-size: 30px; text-align:center;">Exercises with Endurance Type</th>
+                    <th class="th1" colspan="5" style="font-size: 30px; text-align:center;">Exercises with Endurance Type</th>
                 </tr>
                 <tr style="font-size: 25px">
-                    <th style="width:10%;">ID</th>
-                    <th style="width:10%;">Plan ID</th>
-                    <th style="width:15%;">Workout Plan Type</th>
-                    <th style="width:20%;">Exercise Name</th>
-                    <th style="width:20%;">Intensity Level</th>
+                    <th class="th1" style="width:10%;">ID</th>
+                    <th class="th1" style="width:10%;">Plan ID</th>
+                    <th class="th1" style="width:15%;">Workout Plan Type</th>
+                    <th class="th1" style="width:20%;">Exercise Name</th>
+                    <th class="th1" style="width:20%;">Intensity Level</th>
                 </tr>
             </thead>
             <tbody>
@@ -255,29 +268,29 @@ session_start();
                     while($row = $resultset2->fetch_assoc()):
                 ?>
                 <tr>
-                    <td><?php echo $row['exerciseID'] ?></td>
-                    <td><?php echo $row['planid'] ?></td>
-                    <td><?php echo $row['workoutplantype'] ?></td>
-                    <td><?php echo $row['exercisename'] ?></td>
-                    <td><?php echo $row['intensitylevel'] ?></td>
+                    <td class="td1"><?php echo $row['exerciseID'] ?></td>
+                    <td class="td1"><?php echo $row['planid'] ?></td>
+                    <td class="td1"><?php echo $row['workoutplantype'] ?></td>
+                    <td class="td1"><?php echo $row['exercisename'] ?></td>
+                    <td class="td1"><?php echo $row['intensitylevel'] ?></td>
                 </tr>
                 <?php endwhile;?>
             </tbody>
         </table>
     </div>
     <div>
-        <table>
+        <table class="table2">
             <thead>
                 <tr>
-                    <th colspan="6" style="font-size: 30px; text-align:center;">Exercises with 3 Sets and 12 Reps</th>
+                    <th class="th1" colspan="6" style="font-size: 30px; text-align:center;">Exercises with 3 Sets and 12 Reps</th>
                 </tr>
                 <tr style="font-size: 25px">
-                    <th style="width:10%;">ID</th>
-                    <th style="width:10%;">Plan ID</th>
-                    <th style="width:15%;">Workout Plan Type</th>
-                    <th style="width:20%;">Exercise Name</th>
-                    <th style="width:20%;">Intensity Level</th>
-                    <th style="width:20%;">Type of Exercise</th>
+                    <th class="th1" style="width:10%;">ID</th>
+                    <th class="th1" style="width:10%;">Plan ID</th>
+                    <th class="th1" style="width:15%;">Workout Plan Type</th>
+                    <th class="th1" style="width:20%;">Exercise Name</th>
+                    <th class="th1" style="width:20%;">Intensity Level</th>
+                    <th class="th1" style="width:20%;">Type of Exercise</th>
                 </tr>
             </thead>
             <tbody>
@@ -285,12 +298,12 @@ session_start();
                     while($row = $resultset3->fetch_assoc()):
                 ?>
                 <tr>
-                    <td><?php echo $row['exerciseID'] ?></td>
-                    <td><?php echo $row['planid'] ?></td>
-                    <td><?php echo $row['workoutplantype'] ?></td>
-                    <td><?php echo $row['exercisename'] ?></td>
-                    <td><?php echo $row['intensitylevel'] ?></td>
-                    <td><?php echo $row['typeofexercise'] ?></td>
+                    <td class="td1"><?php echo $row['exerciseID'] ?></td>
+                    <td class="td1"><?php echo $row['planid'] ?></td>
+                    <td class="td1"><?php echo $row['workoutplantype'] ?></td>
+                    <td class="td1"><?php echo $row['exercisename'] ?></td>
+                    <td class="td1"><?php echo $row['intensitylevel'] ?></td>
+                    <td class="td1"><?php echo $row['typeofexercise'] ?></td>
                     
                 </tr>
                 <?php endwhile;?>
@@ -298,28 +311,28 @@ session_start();
         </table>
     </div>
     <!-- <div>
-        <table>
+        <table class="table2">
             <thead>
                 <tr>
-                    <th colspan="6" style="font-size: 30px; text-align:center;">Statistics</th>
+                    <th class="th1" colspan="6" style="font-size: 30px; text-align:center;">Statistics</th>
                 </tr>
                 <tr style="font-size: 25px">
-                    <th style="width:15%;">Total number of Workout Plans</th>
-                    <th style="width:15%;"># of Push Workout Plan</th>
-                    <th style="width:15%;"># of Pull Workout Plan</th>
-                    <th style="width:15%;"># of Leg Workout Plan</th>
-                    <th style="width:15%;">Average Number of Exercises per Workout Plan </th>
-                    <th style="width:15%;">Total amount of Reps</th>
+                    <th class="th1" style="width:15%;">Total number of Workout Plans</th>
+                    <th class="th1" style="width:15%;"># of Push Workout Plan</th>
+                    <th class="th1" style="width:15%;"># of Pull Workout Plan</th>
+                    <th class="th1" style="width:15%;"># of Leg Workout Plan</th>
+                    <th class="th1" style="width:15%;">Average Number of Exercises per Workout Plan </th>
+                    <th class="th1" style="width:15%;">Total amount of Reps</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                <td><?php echo $totalPlans ?></td>
-                <td><?php echo $pushPlans ?></td>
-                <td><?php echo $pullPlans ?></td>
-                <td><?php echo $legPlans ?></td>
-                <td><?php echo $avgExercises ?></td>
-                <td><?php echo $totalReps ?></td>
+                <td class="td1"><?php echo $totalPlans ?></td>
+                <td class="td1"><?php echo $pushPlans ?></td>
+                <td class="td1"><?php echo $pullPlans ?></td>
+                <td class="td1"><?php echo $legPlans ?></td>
+                <td class="td1"><?php echo $avgExercises ?></td>
+                <td class="td1"><?php echo $totalReps ?></td>
                 </tr>
             </tbody>
         </table>
