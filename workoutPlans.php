@@ -1,10 +1,10 @@
 <?php
 session_start();
-    include 'connect.php';
-    $sql = "SELECT * FROM tblworkoutplan";
-    $resultset = mysqli_query($connection, $sql);
-    $sql1 = "SELECT * FROM tblexercise";
-    $resultset1 = mysqli_query($connection, $sql1);
+include 'connect.php';
+$sql = "SELECT * FROM tblworkoutplan WHERE isDelete = 0";
+$resultset = mysqli_query($connection, $sql);
+$sql1 = "SELECT * FROM tblexercise WHERE isDeleted = 0";
+$resultset1 = mysqli_query($connection, $sql1); 
    
 ?>
  
@@ -55,7 +55,7 @@ session_start();
             <th class="thData"><a class="nav-link" href="contactUs.php">Contact Us</a></th>
           </tr>
         </table>
-      </header>
+    </header>
     <br>
     <br>
     <div>
@@ -73,7 +73,7 @@ session_start();
             </thead>
             <tbody>
                 <?php
-                    while($row = $resultset->fetch_assoc()):
+                while($row = $resultset->fetch_assoc()):
                 ?>
                 <tr>
                     <td class="td1"><?php echo $row['planid'] ?></td>
@@ -82,98 +82,93 @@ session_start();
                    
                     <?php
                    
-                    $_SESSION['planid'] = $row['planid'];?>
+                    $_SESSION['planid'] = $row['planid'];
+                    ?>
                     <td class="td1">
                         <button style="display: inline; width: 100px;" onclick="window.location='updateworkoutplan.php';" class="btnPrimaryA" name="btnEdit">Edit</button>
                         <form method="post" style="display: inline;">
-                        
                             <input type="hidden" name="planid" value="<?php echo $row['planid'] ?>">
                             <button type="submit" class="btnPrimaryA" name="btnDelete" style="width: 100px;">Delete</button>
                         </form>
                     </td>
                 </tr>
                 <?php
-                    if(isset($_POST['btnDelete'])){
-                        $planid = $_POST['planid'];
-                        $deleteExerciseQuery = "DELETE FROM tblexercise WHERE planid = '$planid'";
-                        mysqli_query($connection, $deleteExerciseQuery);
-            
-                        $sql = "DELETE FROM tblworkoutplan WHERE planid='$planid'";
-                        if(mysqli_query($connection, $sql)){
-                            echo "<script>window.location.href = 'workoutPlans.php'</script>";
-                            exit();
-                        } else {
-                            echo "Error deleting record: " . mysqli_error($connection);
-                        }
-                    }
+                if(isset($_POST['btnDelete'])){
+                    $planid = $_POST['planid'];
+                    
+                  
+                    $updatePlanQuery = "UPDATE tblworkoutplan SET isDelete = 1 WHERE planid = '$planid'";
+                    mysqli_query($connection, $updatePlanQuery);
+                    
+                  
+                    $updateExerciseQuery = "UPDATE tblexercise SET isDeleted = 1 WHERE planid = '$planid'";
+                    mysqli_query($connection, $updateExerciseQuery);
+                    
+                    
+                    echo "<script>window.location.href = 'workoutPlans.php'</script>";
+                    exit();
+                }
+                endwhile;
                 ?>
-                <?php endwhile;?>
             </tbody>
         </table>
     </div>
  
     <div>
-    <table class="table2">
-        <thead>
-            <tr>
-                <th class="th1" colspan="8" style="font-size: 30px; text-align:center;">List of Exercises</th>
-            </tr>
-            <tr style="font-size: 25px">
-                <th class="th1" style="width: 8%">ID</th>
-                <th class="th1" style="width: 8%">Plan ID</th>
-                <th class="th1" style="width: 15%">Exercise name</th>
-                <th class="th1" style="width: 12%">Intensity</th>
-                <th class="th1" style="width: 8%">Sets</th>
-                <th class="th1" style="width: 8%">Reps</th>
-                <th class="th1" style="width: 12%">Type</th>
-                <th class="th1" style="width: 20%">Edit/Delete</th>
-           
-            </tr>
-        </thead>
-        <tbody>
-            <?php
+        <table class="table2">
+            <thead>
+                <tr>
+                    <th class="th1" colspan="8" style="font-size: 30px; text-align:center;">List of Exercises</th>
+                </tr>
+                <tr style="font-size: 25px">
+                    <th class="th1" style="width: 8%">ID</th>
+                    <th class="th1" style="width: 8%">Plan ID</th>
+                    <th class="th1" style="width: 15%">Exercise name</th>
+                    <th class="th1" style="width: 12%">Intensity</th>
+                    <th class="th1" style="width: 8%">Sets</th>
+                    <th class="th1" style="width: 8%">Reps</th>
+                    <th class="th1" style="width: 12%">Type</th>
+                    <th class="th1" style="width: 20%">Edit/Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
                 while($row1 = mysqli_fetch_assoc($resultset1)):
-            ?>
-            <tr>
-                <td class="td1"><?php echo $row1['exerciseID'] ?></td>
-                <td class="td1"><?php echo $row1['planid'] ?></td>
-                <td class="td1"><?php echo $row1['exercisename'] ?></td>
-                <td class="td1"><?php echo $row1['intensitylevel'] ?></td>
-                <td class="td1"><?php echo $row1['sets'] ?></td>
-                <td class="td1"><?php echo $row1['reps'] ?></td>
-                <td class="td1"><?php echo $row1['typeofexercise'] ?></td>
-                <td class="td1">
-                    <a href="updateExercise.php?exerciseID=<?php echo $row1['exerciseID']; ?>">Edit</a>
-                    <form method="post" style="display: inline;">
-                        <input type="hidden" name="deleteExerciseID" value="<?php echo $row1['exerciseID']; ?>">
-                        <button type="submit" name="btnDeletee" style="width: 100px;">Delete</button>
-                    </form>
-                </td>
-            </tr>
-            <?php endwhile;?>
-        </tbody>
-    </table>
-    <?php
+                ?>
+                <tr>
+                    <td class="td1"><?php echo $row1['exerciseID'] ?></td>
+                    <td class="td1"><?php echo $row1['planid'] ?></td>
+                    <td class="td1"><?php echo $row1['exercisename'] ?></td>
+                    <td class="td1"><?php echo $row1['intensitylevel'] ?></td>
+                    <td class="td1"><?php echo $row1['sets'] ?></td>
+                    <td class="td1"><?php echo $row1['reps'] ?></td>
+                    <td class="td1"><?php echo $row1['typeofexercise'] ?></td>
+                    <td class="td1">
+                        <a href="updateExercise.php?exerciseID=<?php echo $row1['exerciseID']; ?>">Edit</a>
+                        <form method="post" style="display: inline;">
+                            <input type="hidden" name="deleteExerciseID" value="<?php echo $row1['exerciseID']; ?>">
+                            <button type="submit" name="btnDeletee" style="width: 100px;">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+                <?php endwhile; ?>
+            </tbody>
+        </table>
+        <?php
         if(isset($_POST['btnDeletee'])){
             if(isset($_POST['deleteExerciseID'])) {
                 $deleteExerciseID = $_POST['deleteExerciseID'];
+                
+              
+                $deleteSql = "UPDATE tblexercise SET isDeleted = 1 WHERE exerciseID = '$deleteExerciseID'";
+                mysqli_query($connection, $deleteSql);
         
-                $deleteSql = "DELETE FROM tblexercise WHERE exerciseID = '$deleteExerciseID'";
-        
-                $deleteResult = mysqli_query($connection, $deleteSql);
-        
-                if($deleteResult) {
-                    echo "<script>window.location.href = 'workoutPlans.php'</script>";
-                } 
-                // else {
-                //     echo "<script>alert('Error deleting exercise');</script>";
-                // }
+              
+                echo "<script>window.location.href = 'workoutPlans.php'</script>";
+                exit();
             } 
-            // else {
-            //     echo "<script>alert('Exercise ID not provided');</script>";
-            // }
         }
-    ?>
+        ?>
     </div>
     <footer>
         <p>Peter Sylvan L. Vecina | Kyle T. Vasquez</p>
@@ -183,6 +178,4 @@ session_start();
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
- 
-   
 </body>

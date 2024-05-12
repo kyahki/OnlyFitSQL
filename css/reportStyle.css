@@ -57,3 +57,42 @@ a {
     width: 100%;
     font-size: 25px;
 }
+
+.statistics-chart {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.chart {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    margin-top: 20px;
+}
+
+.bar {
+    width: 100px;
+    background-color: #007bff;
+    color: white;
+    padding: 5px;
+}
+
+.push {
+    background-color: #28a745;
+}
+
+.pull {
+    background-color: #dc3545;
+}
+
+.legs {
+    background-color: #ffc107;
+}
+
+.calisthenics {
+    background-color: #6610f2;
+}
+
+.custom {
+    background-color: #6c757d;
+}

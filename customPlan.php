@@ -56,6 +56,7 @@ $resultset = mysqli_query($connection, $sql);
       </header>
     
     <form method="post">
+    <input type="hidden" name="isDelete" value="0">
         <table class="table2">
             <tr>
                 <th class="th1" colspan="2" style="text-align: center; font-size: 35px;">Custom Workout Plan</th>
@@ -84,10 +85,10 @@ $resultset = mysqli_query($connection, $sql);
 if(isset($_POST['btnSubmit'])){
     $workoutplantype = mysqli_real_escape_string($connection, $_POST['workouttype']);
     $workoutplandescription = mysqli_real_escape_string($connection, $_POST['workoutdescription']);
-    
-    $sql = "INSERT INTO tblworkoutplan(workoutplandescription, workoutplantype) VALUES (?, ?)";
+    $isDelete = 0;
+    $sql = "INSERT INTO tblworkoutplan(workoutplandescription, workoutplantype, isDelete) VALUES(?, ?, ?)";
     $stmt = mysqli_prepare($connection, $sql);
-    mysqli_stmt_bind_param($stmt, "ss", $workoutplandescription, $workoutplantype);
+    mysqli_stmt_bind_param($stmt, "ssi", $workoutplandescription, $workoutplantype, $isDelete);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
 

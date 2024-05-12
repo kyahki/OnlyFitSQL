@@ -66,6 +66,7 @@ $resultset = mysqli_query($connection, $sql);
             <form action="" method="post">
                 <input type="hidden" name="workoutdesciprtion" value="Calisthenics Plan: Enhance your strength, flexibility, and body control with bodyweight exercises. Utilize your own body as resistance to build muscle and improve overall fitness. The exercises in this plan will primarily involve bodyweight movements targeting various muscle groups.">
                 <input type="hidden" name="workouttype" value="calisthenics">
+                <input type="hidden" name="isDelete" value="0">
                 <button type="submit" name="btnRegister" class="btnPrimaryA">Create Calisthenics Workout Plan</button>
             </form>
       </div>
@@ -88,9 +89,10 @@ $resultset = mysqli_query($connection, $sql);
     if(isset($_POST['btnRegister'])){
         $workoutplandescription = mysqli_real_escape_string($connection, $_POST['workoutdesciprtion']);     
         $workoutplantype = mysqli_real_escape_string($connection, $_POST['workouttype']);
-        $sql = "INSERT INTO tblworkoutplan(workoutplandescription, workoutplantype) VALUES(?, ?)";
+        $isDelete = 0;
+        $sql = "INSERT INTO tblworkoutplan(workoutplandescription, workoutplantype, isDelete) VALUES(?, ?, ?)";
         $stmt = mysqli_prepare($connection, $sql);
-        mysqli_stmt_bind_param($stmt, "ss", $workoutplandescription, $workoutplantype);
+        mysqli_stmt_bind_param($stmt, "ssi", $workoutplandescription, $workoutplantype, $isDelete);
         mysqli_stmt_execute($stmt);
         echo "<script>
               window.location.href = 'exercise.php'</script>";

@@ -61,8 +61,10 @@
     <br>
     <br>
     <form method="post">
+    <input type="hidden" name="isDeleted" value="0">    
         <table class="table2">
             <tr>
+                 <input type="hidden" name="isDeleted" value="0">
                 <th class="th1" colspan="2" style="text-align: center; font-size: 35px;">Exercise</th>
             </tr>
             <tr>
@@ -112,8 +114,8 @@
         $sets = $_POST['sets'];		
         $reps = $_POST['reps'];
         $type = $_POST['typeExercise'];
-        
-        $sql = "INSERT INTO tblexercise(planid, exercisename, intensitylevel, sets, reps, typeofexercise) VALUES('$planid', '".$ename."', '".$intensity."', '$sets', '$reps', '".$type."')";
+        $isDeleted = 0;
+        $sql = "INSERT INTO tblexercise(planid, exercisename, intensitylevel, sets, reps, typeofexercise, isDeleted) VALUES('$planid', '".$ename."', '".$intensity."', '$sets', '$reps', '".$type."', $isDeleted)";
         mysqli_query($connection, $sql);
 
         echo "<script>
