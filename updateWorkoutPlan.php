@@ -1,8 +1,10 @@
 <?php
-session_start();
-include 'connect.php';
-$sql = "SELECT * FROM tblworkoutplan";
-$resultset = mysqli_query($connection, $sql);
+if (isset($_GET['planid'])) {
+  $id_value = $_GET['planid'];
+  include 'connect.php';
+  $sql = "SELECT * FROM tblworkoutplan WHERE planid = '" . mysqli_real_escape_string($connection, $id_value) . "'";
+  $resultset = mysqli_query($connection, $sql);
+}
  
 ?>
  
@@ -61,7 +63,7 @@ $resultset = mysqli_query($connection, $sql);
     <br>
     <br>
    
-    <form method="post">
+    <form method="post" id="workoutForm">
         <table class="table2">
             <tr>
                 <th class="th1" colspan="2" style="text-align: center; font-size: 35px;">Edit Workout Plan</th>
@@ -74,9 +76,20 @@ $resultset = mysqli_query($connection, $sql);
                 <td class="td1">Place New Workout Description </td>
                 <td class="td1"><textarea rows="4" cols="50" class="form-control" id="workoutdescription" name="workoutdescription"  placeholder="Enter workout description" required></textarea></td>
             </tr>
-           
-            <tr>
-                <td class="td1" colspan = "2"style="border-right: none; border-bottom: none;"><button type="submit" name="btnSubmit">Submit</button></td>
+          
+            <tr id="confirmationSection" style="display: none;">
+                <td class="td1" colspan="2">
+                    Are you sure the data is confirmed? 
+                    <br>
+                    <br>
+                    <button type="submit" name="btnSubmit">YES</button>
+                    <button type="button" onclick="hideConfirmation()">NO</button>
+                </td>
+            </tr>
+            <tr id="submitButtonRow">
+                <td class="td1" colspan="2" style="border-right: none; border-bottom: none;">
+                    <button type="button" onclick="showConfirmation()">Submit</button>
+                </td>
             </tr>
         </table>
     </form>
@@ -103,15 +116,13 @@ $resultset = mysqli_query($connection, $sql);
 //     exit();
 // }
 if(isset($_POST['btnSubmit'])){
-  $id_value = $_SESSION['planid'];
   $workoutplantype = mysqli_real_escape_string($connection, $_POST['workouttype']);
   $workoutplandescription = mysqli_real_escape_string($connection, $_POST['workoutdescription']);
  
   $sql = "UPDATE tblworkoutplan SET workoutplantype='$workoutplantype', workoutplandescription='$workoutplandescription' WHERE planid=$id_value";
  
   if(mysqli_query($connection, $sql)){
-      echo "<script>alert('Workout plan updated successfully')</script>";
-      echo "<script>window.location.href = 'exercise.php'</script>";
+      echo "<script>window.location.href = 'workoutPlans.php'</script>";
       exit();
   } else {
       echo "Error updating record: " . mysqli_error($connection);

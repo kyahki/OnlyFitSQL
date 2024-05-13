@@ -85,9 +85,8 @@ $resultset1 = mysqli_query($connection, $sql1);
                     $_SESSION['planid'] = $row['planid'];
                     ?>
                     <td class="td1">
-                        <button style="display: inline; width: 100px;" onclick="window.location='updateworkoutplan.php';" class="btnPrimaryA" name="btnEdit">Edit</button>
+                        <a href="updateWorkoutPlan.php?planid=<?php echo $row['planid']; ?>">Edit</a>
                         <form method="post" style="display: inline;">
-                            <input type="hidden" name="planid" value="<?php echo $row['planid'] ?>">
                             <button type="submit" class="btnPrimaryA" name="btnDelete" style="width: 100px;">Delete</button>
                         </form>
                     </td>

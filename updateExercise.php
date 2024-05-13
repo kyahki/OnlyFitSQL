@@ -90,8 +90,19 @@
                 <td class="td1"><input type="text" class="form-control" id="typeofexercisechange" name="typeofexercisechange" value="<?php echo $row['typeofexercise']; ?>" required></td>
             </tr>
             
-            <tr> 
-                <td class="td1" colspan = "2"style="border-right: none; border-bottom: none;"><button type="submit" name="btnSubmit">Submit</button></td>
+            <tr id="confirmationSection" style="display: none;">
+                <td class="td1" colspan="2">
+                    Are you sure the data is confirmed? 
+                    <br>
+                    <br>
+                    <button type="submit" name="btnSubmit">YES</button>
+                    <button type="button" onclick="hideConfirmation()">NO</button>
+                </td>
+            </tr>
+            <tr id="submitButtonRow">
+                <td class="td1" colspan="2" style="border-right: none; border-bottom: none;">
+                    <button type="button" onclick="showConfirmation()">Submit</button>
+                </td>
             </tr>
         </table>
     </form>
@@ -121,7 +132,7 @@ if(isset($_POST['btnSubmit'])){
     $result = mysqli_query($connection, $sql);
 
     if($result) {
-        echo "<script>window.location.href = 'exercise.php'</script>";
+        echo "<script>window.location.href = 'workoutPlans.php'</script>";
         exit();
     }
 
