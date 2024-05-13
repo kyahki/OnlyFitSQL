@@ -1,7 +1,7 @@
 <?php
 session_start();
     include 'connect.php';
-    $sql = "SELECT tblexercise.exerciseID, tblexercise.planid, tblworkoutplan.workoutplantype, 
+    $sql = "SELECT tblworkoutplan.workoutplantype, 
     tblexercise.exercisename, tblexercise.typeofexercise 
     FROM tblworkoutplan 
     INNER JOIN tblexercise ON tblworkoutplan.planid = tblexercise.planid
@@ -14,7 +14,7 @@ session_start();
     // $sql1 = "SELECT * FROM tblexercise WHERE isDeleted = 0"; dili ipakita kun flagged as 1
     $resultset1 = mysqli_query($connection, $sql1);
 
-    $sql2 = "SELECT tblexercise.exerciseID, tblexercise.planid, tblworkoutplan.workoutplantype, 
+    $sql2 = "SELECT tblworkoutplan.workoutplantype, 
     tblexercise.exercisename, tblexercise.intensitylevel
     FROM tblworkoutplan 
     INNER JOIN tblexercise ON tblworkoutplan.planid = tblexercise.planid
@@ -23,7 +23,7 @@ session_start();
 
     $resultset2 = mysqli_query($connection, $sql2);
 
-    $sql3 = "SELECT tblexercise.exerciseID, tblexercise.planid, tblworkoutplan.workoutplantype, 
+    $sql3 = "SELECT tblworkoutplan.workoutplantype, 
     tblexercise.exercisename, tblexercise.intensitylevel, tblexercise.typeofexercise
     FROM tblworkoutplan
     INNER JOIN tblexercise ON tblworkoutplan.planid = tblexercise.planid
@@ -193,11 +193,9 @@ session_start();
     <table class="table2">
         <thead>
             <tr>
-                <th class="th1" colspan="8" style="font-size: 30px; text-align:center;">List of Exercises</th>
+                <th class="th1" colspan="5" style="font-size: 30px; text-align:center;">List of Exercises</th>
             </tr>
             <tr style="font-size: 25px">
-                <th class="th1" style="width: 8%">ID</th>
-                <th class="th1" style="width: 8%">Plan ID</th>
                 <th class="th1" style="width: 15%">Exercise name</th>
                 <th class="th1" style="width: 12%">Intensity</th>
                 <th class="th1" style="width: 8%">Sets</th>
@@ -211,8 +209,6 @@ session_start();
                 while($row1 = mysqli_fetch_assoc($resultset1)):
             ?>
             <tr>
-                <td class="td1"><?php echo $row1['exerciseID'] ?></td>
-                <td class="td1"><?php echo $row1['planid'] ?></td>
                 <td class="td1"><?php echo $row1['exercisename'] ?></td>
                 <td class="td1"><?php echo $row1['intensitylevel'] ?></td>
                 <td class="td1"><?php echo $row1['sets'] ?></td>
@@ -224,38 +220,6 @@ session_start();
     </table>
     </div>
     <div>
-    <table class="table2">
-        <thead>
-            <tr>
-                <th class="th1" colspan="8" style="font-size: 30px; text-align:center;">List of Workout Plans</th>
-            </tr>
-            <tr style="font-size: 25px">
-                <th class="th1" style="width: 8%">ID</th>
-                <th class="th1" style="width: 8%">Plan ID</th>
-                <th class="th1" style="width: 15%">Exercise name</th>
-                <th class="th1" style="width: 12%">Intensity</th>
-                <th class="th1" style="width: 8%">Sets</th>
-                <th class="th1" style="width: 8%">Reps</th>
-                <th class="th1" style="width: 12%">Type</th>
-           
-            </tr>
-        </thead>
-        <tbody>
-            <?php
-                while($row1 = mysqli_fetch_assoc($resultset1)):
-            ?>
-            <tr>
-                <td class="td1"><?php echo $row1['exerciseID'] ?></td>
-                <td class="td1"><?php echo $row1['planid'] ?></td>
-                <td class="td1"><?php echo $row1['exercisename'] ?></td>
-                <td class="td1"><?php echo $row1['intensitylevel'] ?></td>
-                <td class="td1"><?php echo $row1['sets'] ?></td>
-                <td class="td1"><?php echo $row1['reps'] ?></td>
-                <td class="td1"><?php echo $row1['typeofexercise'] ?></td>
-            </tr>
-            <?php endwhile;?>
-        </tbody>
-    </table>
     </div>
     <div>
         <table class="table2">
@@ -264,8 +228,6 @@ session_start();
                     <th class="th1" colspan="5" style="font-size: 30px; text-align:center;">Exercises with Beginner Intensity</th>
                 </tr>
                 <tr style="font-size: 25px">
-                    <th class="th1" style="width:10%;">ID</th>
-                    <th class="th1" style="width:10%;">Plan ID</th>
                     <th class="th1" style="width:15%;">Workout Plan Type</th>
                     <th class="th1" style="width:20%;">Exercise Name</th>
                     <th class="th1" style="width:20%;">Type of Exercise</th>
@@ -276,8 +238,6 @@ session_start();
                     while($row = $resultset->fetch_assoc()):
                 ?>
                 <tr>
-                    <td class="td1"><?php echo $row['exerciseID'] ?></td>
-                    <td class="td1"><?php echo $row['planid'] ?></td>
                     <td class="td1"><?php echo $row['workoutplantype'] ?></td>
                     <td class="td1"><?php echo $row['exercisename'] ?></td>
                     <td class="td1"><?php echo $row['typeofexercise'] ?></td>
@@ -293,8 +253,6 @@ session_start();
                     <th class="th1" colspan="5" style="font-size: 30px; text-align:center;">Exercises with Endurance Type</th>
                 </tr>
                 <tr style="font-size: 25px">
-                    <th class="th1" style="width:10%;">ID</th>
-                    <th class="th1" style="width:10%;">Plan ID</th>
                     <th class="th1" style="width:15%;">Workout Plan Type</th>
                     <th class="th1" style="width:20%;">Exercise Name</th>
                     <th class="th1" style="width:20%;">Intensity Level</th>
@@ -305,8 +263,6 @@ session_start();
                     while($row = $resultset2->fetch_assoc()):
                 ?>
                 <tr>
-                    <td class="td1"><?php echo $row['exerciseID'] ?></td>
-                    <td class="td1"><?php echo $row['planid'] ?></td>
                     <td class="td1"><?php echo $row['workoutplantype'] ?></td>
                     <td class="td1"><?php echo $row['exercisename'] ?></td>
                     <td class="td1"><?php echo $row['intensitylevel'] ?></td>
@@ -322,8 +278,6 @@ session_start();
                     <th class="th1" colspan="6" style="font-size: 30px; text-align:center;">Exercises with 3 Sets and 12 Reps</th>
                 </tr>
                 <tr style="font-size: 25px">
-                    <th class="th1" style="width:10%;">ID</th>
-                    <th class="th1" style="width:10%;">Plan ID</th>
                     <th class="th1" style="width:15%;">Workout Plan Type</th>
                     <th class="th1" style="width:20%;">Exercise Name</th>
                     <th class="th1" style="width:20%;">Intensity Level</th>
@@ -335,8 +289,6 @@ session_start();
                     while($row = $resultset3->fetch_assoc()):
                 ?>
                 <tr>
-                    <td class="td1"><?php echo $row['exerciseID'] ?></td>
-                    <td class="td1"><?php echo $row['planid'] ?></td>
                     <td class="td1"><?php echo $row['workoutplantype'] ?></td>
                     <td class="td1"><?php echo $row['exercisename'] ?></td>
                     <td class="td1"><?php echo $row['intensitylevel'] ?></td>
@@ -374,7 +326,7 @@ session_start();
             </tbody>
         </table>
     </div> -->
-    
+    <hr>
     <div class="container">
     <div class="row justify-content-center align-items-center" style="height: 100vh;">
     <div class="col-md-6">
@@ -399,21 +351,16 @@ session_start();
             </div>
         </div>
     </div>  
-</div>
-<br>
-<br>
-<br>
-<br>
+</div>  
+<hr>
 <div class="statistics-chart">
-    <h2>BAR CHART FOR WORKOUT PLANS</h2>
-    <br>
-    <hr>
+    <h2 style="color: #000000; font-size: 40px; border-bottom: 2px solid #000000;">BAR CHART FOR WORKOUT PLANS</h2>
     <div class="chart">
-        <div class="bar push" style="height: 690px;">Push: 69</div>
-        <div class="bar pull" style="height: 420px;">Pull: 42</div>
-        <div class="bar legs" style="height: 170px;">Legs: 17</div>
-        <div class="bar calisthenics" style="height: 330px;">Calisthenics: 33</div>
-        <div class="bar custom" style="height: 110px;">Custom Plans: 11</div>
+        <div class="bar push" style="height: 690px; color: #000000;">Push: 69</div>
+        <div class="bar pull" style="height: 420px; color: #000000;">Pull: 42</div>
+        <div class="bar legs" style="height: 170px; color: #000000;">Legs: 17</div>
+        <div class="bar calisthenics" style="height: 330px; color: #000000;">Calisthenics: 33</div>
+        <div class="bar custom" style="height: 110px; color: #000000;">Custom Plans: 11</div>
     </div>
 </div>
 <br>
