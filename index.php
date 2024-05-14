@@ -67,7 +67,8 @@
       </section>
       <br>
       <br>
-      <a href="report.php" class="button" style="margin: 45%" >REPORT</a>
+      <h1 class="hOne">READ REPORTS</h1>
+      <a href="report.php" class="button" style="margin: 45%;" >Dashboard</a>
       <br>
       <br>
       <br>
